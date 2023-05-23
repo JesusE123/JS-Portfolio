@@ -6,6 +6,7 @@ import Skills from './components/Skills'
 
 import {BsArrowDownShort} from 'react-icons/bs'
 
+
 export default function Home() {
   return (
     <>

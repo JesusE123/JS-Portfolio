@@ -14,6 +14,8 @@ const Presentation = () => {
       pt-2
        mb-5
        opacity-100
+       sm:text-3xl
+       
       '>
         Frontend Developer Jr
       </span>
@@ -23,7 +25,7 @@ const Presentation = () => {
       '>
        Soy un desarrollador web apasionado por la tecnologia,
        por la innovacion y por todo lo que nos tiene el futuro
-       en el mundo IT
+       en el mundo IT.
     
       </p>
 

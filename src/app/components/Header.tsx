@@ -6,11 +6,13 @@ const Header = () => {
     <div className="
      flex
      justify-around
+     items-center
+      min-h-full
      p-5
      mx-2
     ">
         <div>
-            <h1 className='text-bold text-3xl text-white'>JS</h1>
+            <h1 className='text-bold text-3xl text-white mt-2'>JS</h1>
         </div>
         <div>
             <Menu />

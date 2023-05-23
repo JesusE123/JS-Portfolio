@@ -4,7 +4,7 @@ const DowloadCv = () => {
   return (
     <div className='mt-2'>
         <button className='
-          bg-slate-300
+          bg-transparent
          border
          border-1
          rounded
@@ -12,8 +12,10 @@ const DowloadCv = () => {
          py-1
          hover:bg-slate-500
          shadow-lg
+         text-white
+
         '>
-          Descargar Cv
+          Descargar cv
           </button>
     </div>
   )
