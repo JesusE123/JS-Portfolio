@@ -2,15 +2,18 @@ import Image from 'next/image'
 import Header from './components/Header'
 import Presentation from './components/Presentation'
 import Skills from './components/Skills'
+import Scroll from './components/Scroll'
 
 
 import {BsArrowDownShort} from 'react-icons/bs'
+
 
 
 export default function Home() {
   return (
     <>
     <div>
+      <Scroll />
         <Header />
         <div className='
         flex
