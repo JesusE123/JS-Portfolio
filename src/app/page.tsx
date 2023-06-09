@@ -25,7 +25,9 @@ export default function Home() {
 
 
       { /* presentation */}
-      <div className='
+      <motion.div 
+      
+      className='
     flex
     items-center
     min-h-screen
@@ -33,10 +35,13 @@ export default function Home() {
         <div className='flex justify-center'>
           <Presentation />
         </div>
-        <div className='w-2/4'>
+        <motion.div 
+       animate={{ x: [0, 100, 0] }}
+       transition={{ ease: [0.5, 0.71, 1, 1.5], duration: 2 }}
+        className='w-2/4'>
           <Image src='/logo.png' alt='logo' width={350} height={30} className='rounded shadow-lg' />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
 
       <div className='
@@ -62,6 +67,19 @@ export default function Home() {
           
           <Skills />
         </div>
+
+        <div className='
+          text-center 
+          flex 
+          justify-center
+          text-5xl
+          
+          '>
+        <BsArrowDownShort className='animate-bounce' />
+      </div>
+
+
+        
 
 
         <div className='

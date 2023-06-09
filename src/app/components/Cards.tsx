@@ -5,31 +5,41 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Link from 'next/link';
 
 interface cardProps {
     name: string,
-    path: string
+    path: string,
+    image:any,
+    description:string
 }
 
 const Cards: React.FC<cardProps> = ({
     name,
-    path
+    path,
+    image,
+    description
 }) => {
   return (
     <div id='Proyectos'>
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345 }} className='hover:scale-125'>
+        <CardMedia
+        sx={{ height: 140 }}
+        image={image}
+        title="logo image"
+      />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          {description}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+       <Link href={`${path}`} className='mx-4 hover:opacity-40 transition cursor-pointer'>
+          Ver proyecto
+       </Link>
       </CardActions>
     </Card>
     </div>

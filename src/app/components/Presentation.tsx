@@ -1,13 +1,25 @@
 import React from 'react'
 import SocialContact from './SocialContact'
+import { motion } from 'framer-motion'
 
 
 const Presentation = () => {
   return (
-    <div id='presentation' className='w-2/4'>
+    <motion.div 
+    id='presentation' 
+    className='w-2/4'
+    animate={{ x: [50, 150, 1], opacity: 1, scale: 1 }}
+      transition={{
+          duration: 3,
+          delay: 0.1,
+          ease: [0.5, 0.71, 1, 1.5],
+      }}
+      initial={{ opacity: 0, scale: 0.5 }}
+      
+    >
 
       <h1 className='text-9xl font-bold '>Jesús</h1>
-      <h1 className='text-9xl font-bold '>Sanchez</h1>
+      <h1  className='text-9xl font-bold '>Sanchez</h1>
 
       <span className='
       text-4xl
@@ -46,7 +58,7 @@ const Presentation = () => {
       </div>
 
    
-    </div>
+    </motion.div>
   )
 }
 

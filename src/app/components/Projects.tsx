@@ -3,9 +3,25 @@ import Cards from './Cards'
 
 const Projects = () => {
     const projects = [
-      {id: 1, name: 'FakeStore', path: 'https://github.com/JesusE123/FakeStore' },
-      {id: 2, name: 'Rick and Morty', path: 'https://github.com/JesusE123/Rick-and-Morty' },
-      {id: 3, name: 'Todo App', path: 'https://github.com/JesusE123/Article-APP' },
+      {id: 1, 
+        name: 'FakeStore', 
+        path: 'https://github.com/JesusE123/FakeStore', 
+        img: './fakestore.png', 
+        description: 'Uso de api para simular una tienda online y poder crear un carrito de compras, haciendo uso de metodos HTTP'
+      },
+      {id: 2, 
+        name: 'Rick and Morty', 
+        path: 'https://github.com/JesusE123/Rick-and-Morty' ,
+        img: './rickandmorty.png',
+        description: 'Uso de la api rick and morty, podremos buscar los personajes de la serie. Filtrarlos por nombre y specie'
+      },
+      {id: 3, 
+        name: 'Todo App', 
+        path: 'https://github.com/JesusE123/Article-APP' ,
+        img: './todo.png',
+        description: 'Proyecto famoso para practicar conocimientos, podremos adaptarlo a nuestros gustos y necesidades'
+        
+      },
     ]
   return (
     <div>
@@ -24,6 +40,8 @@ const Projects = () => {
             key={index}
             name={element.name}
             path={element.path}
+            image={element.img}
+            description={element.description}
             />
             
           ))
