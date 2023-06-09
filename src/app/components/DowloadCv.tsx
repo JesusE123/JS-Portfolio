@@ -12,11 +12,11 @@ const DowloadCv = () => {
          py-1
          hover:bg-slate-500
          shadow-lg
-         text-white
-
         '>
           Descargar cv
           </button>
+
+          
     </div>
   )
 }

@@ -1,11 +1,13 @@
 import React from 'react'
+import SocialContact from './SocialContact'
+
 
 const Presentation = () => {
   return (
-    <div className=' w-2/4'>
+    <div id='presentation' className='w-2/4'>
 
-      <h1 className='text-9xl font-bold text-white'>Jesús</h1>
-      <h1 className='text-9xl font-bold text-white'>Sanchez</h1>
+      <h1 className='text-9xl font-bold '>Jesús</h1>
+      <h1 className='text-9xl font-bold '>Sanchez</h1>
 
       <span className='
       text-4xl
@@ -38,6 +40,12 @@ const Presentation = () => {
         seguir ampliando mi conocimiento y continuar con mi aprendizaje.
 
       </p>
+
+      <div>
+        <SocialContact />
+      </div>
+
+   
     </div>
   )
 }

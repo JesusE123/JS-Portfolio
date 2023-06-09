@@ -2,18 +2,18 @@ import React from 'react'
 import Link from 'next/link'
 const Menu = () => {
   return (
-    <div className='text-white'>
-        <ul className='flex flex-row space-x-8 items-center mt-2 ml-12'>
-                <li>
-                <Link href='#'>Sobre mi</Link>
+    <div className=''>
+        <ul className='flex flex-row space-x-8 items-center ml-12 text-xl'>
+                <li className='hover:bg-slate-500 rounded px-1 py-1 transition'>
+                <Link href='/#presentation'>Sobre mi</Link>
                 </li>
-                <li>
-                <Link href='#'>Habilidades</Link>
+                <li className='hover:bg-slate-500 rounded px-1 py-1 transition'>
+                <Link href='/#skills'>Habilidades</Link>
                 </li>
-                <li>
-                <Link href='#'>Proyectos</Link>
+                <li className='hover:bg-slate-500 rounded px-1 py-1 transition'>
+                <Link href='/#Proyectos'>Proyectos</Link>
                 </li>
-                <li>
+                <li className='hover:bg-slate-500 rounded px-1 py-1 transition'>
                 <Link href='#'>Contacto</Link>
                 </li>
             </ul>

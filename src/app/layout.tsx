@@ -1,6 +1,12 @@
+
 import './globals.css'
 import * as React from 'react'
 import { Inter } from 'next/font/google'
+import Providers from './Providers'
+import Themechanger from './components/ThemeSwitcher'
+
+
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,8 +21,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Providers>
+          <div className='overflow-x-hidden'>
+            <Themechanger />
+            {children}
+          </div>
+        </Providers>
+      </body>
     </html>
+
   )
 }
