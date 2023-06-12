@@ -8,6 +8,7 @@ import { motion } from 'framer-motion'
 
 import { BsArrowDownShort } from 'react-icons/bs'
 import Projects from './components/Projects'
+import Contact from './components/Contact'
 
 
 
@@ -85,12 +86,16 @@ export default function Home() {
         <div className='
         flex 
         justify-center 
-        text-center 
         items-center
         font-semibold
         mt-5
         min-h-screen'>
           <Projects />
+        </div>
+
+
+        <div className='grid justify-items-center content-center'>
+          <Contact />
         </div>
 
     </>

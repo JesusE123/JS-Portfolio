@@ -25,7 +25,7 @@ const Projects = () => {
     ]
   return (
     <div>
-      <h1 className='text-4xl'>
+      <h1 className='text-4xl text-center py-4'>
         Proyectos
       </h1>
 
