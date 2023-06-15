@@ -7,10 +7,14 @@ const Form = () => {
     flex
     items-center
     flex-col
-     pb-6
+     border
+     border-dashed
+     border-gray-500
+     rounded
+     py-2
     "
     >
-      <h3 className="text-2xl pb-2 ">Enviarme un mensaje</h3>
+      <h3 className="text-2xl pb-5 ">Enviame un mensaje</h3>
       <form className="flex flex-col">
         <div className=" mb-3">
           <input
@@ -37,14 +41,35 @@ const Form = () => {
         rounded-lg
         px-2
         py-1
+
         "
             placeholder="Email"
           />
         </div>
 
         <div className="mt-4">
-          <textarea placeholder="Mensaje" className="rounded border border-gray-500 shadow-lg"></textarea>
+          <textarea placeholder="Mensaje" className="
+          rounded 
+          border 
+          border-gray-500 
+          shadow-lg 
+          w-full
+          px-2
+          ">
+          </textarea>
         </div>
+
+        <button className="
+        border
+        border-gray-500
+        bg-transparent
+        cursor-pointer
+        transition
+        hover:opacity-50
+        w-full
+        ">
+          Enviar
+        </button>
       </form>
     </div>
   );

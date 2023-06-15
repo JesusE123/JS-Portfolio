@@ -1,5 +1,7 @@
 import React from "react";
 import Form from "./Form";
+
+import Image from "next/image";
 import { PersonalInformation } from "./PersonalInformation";
 
 function Contact() {
@@ -13,16 +15,15 @@ function Contact() {
     flex
     flex-row
     justify-between
-    w-3/4
+    items-center
     mt-5
     min-h-screen
     ">
-      <div className="w-full">
+      <div className="">
         <Form />
       </div>
-      <div className="w-full">
-        <PersonalInformation />
-      </div>
+
+      <Image src='/developer.webp' alt='logo' width={200} height={30} className='bg-transparent' />
       </div>
     </>
   );
