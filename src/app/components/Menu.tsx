@@ -14,7 +14,7 @@ const Menu = () => {
                 <Link href='/#Proyectos'>Proyectos</Link>
                 </li>
                 <li className='hover:bg-slate-500 rounded px-1 py-1 transition'>
-                <Link href='#'>Contacto</Link>
+                <Link href='/#contact'>Contacto</Link>
                 </li>
             </ul>
     </div>

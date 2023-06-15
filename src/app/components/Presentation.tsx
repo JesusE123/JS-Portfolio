@@ -18,7 +18,7 @@ const Presentation = () => {
       
     >
 
-      <h1 className='text-9xl font-bold '>Jesús</h1>
+      <h1 className='text-9xl font-bold  text-[#88ffcc]'>Jesús</h1>
       <h1  className='text-9xl font-bold '>Sanchez</h1>
 
       <span className='

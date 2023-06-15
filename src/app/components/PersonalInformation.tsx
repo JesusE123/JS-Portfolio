@@ -27,7 +27,7 @@ export const PersonalInformation = () => {
       <div>
         <ul className=''>
           {data.map((element, index) => (
-            <div className='flex flex-row items-center space-x-5'>
+            <div className='flex flex-row items-center space-x-5' key={index}>
             <li key={index} className='text-3xl py-2 flex'>
               {element.icon}
             </li>

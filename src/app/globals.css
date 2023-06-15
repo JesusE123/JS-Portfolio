@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -9,6 +11,7 @@ body {
     color:black !important;
     background-color: white !important;
     transition-delay: 0,5s;
+    
 }
 
 [data-theme="dark"] body {
