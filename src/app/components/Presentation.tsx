@@ -1,9 +1,11 @@
 import React from 'react'
 import SocialContact from './SocialContact'
 import { motion } from 'framer-motion'
-
+import { useTheme } from "next-themes";
 
 const Presentation = () => {
+  const {theme, setTheme} = useTheme()
+  const light = theme === "light";
   return (
     <motion.div 
     id='presentation' 
@@ -18,7 +20,7 @@ const Presentation = () => {
       
     >
 
-      <h1 className='text-9xl font-bold  text-[#88ffcc]'>Jesús</h1>
+      <h1 className={ light ? 'text-9xl font-bold  text-blue-950' : 'text-9xl font-bold text-[#88ffcc]'}>Jesús</h1>
       <h1  className='text-9xl font-bold '>Sanchez</h1>
 
       <span className='

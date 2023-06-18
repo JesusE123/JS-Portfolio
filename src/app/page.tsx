@@ -3,14 +3,22 @@ import Image from "next/image";
 import Header from "./components/Header";
 import Presentation from "./components/Presentation";
 import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Copyright from "./components/Copyright";
 
+import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 
 import { BsArrowDownShort } from "react-icons/bs";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
+import { PersonalInformation } from "./components/PersonalInformation";
 
 export default function Home() {
+
+  const {theme, setTheme} = useTheme()
+
+
+ const light = theme === "light";
   return (
     <>
       {/* Header */}
@@ -96,6 +104,20 @@ export default function Home() {
         "
       >
         <Contact />
+      </div>
+
+
+      <div className=
+      {light ? ' min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-black text-white' 
+      : 
+      'min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-white text-black'}>
+        <div className="flex justify-center">
+          <Copyright />
+        </div>
+        <div className="flex justify-center">
+          <PersonalInformation />
+        </div>
+
       </div>
     </>
   );

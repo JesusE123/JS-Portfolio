@@ -22,7 +22,7 @@ const data = [{
 export const PersonalInformation = () => {
   return (
     <div>
-      <h3>Informacion Personal</h3>
+      <h3  className='text-3xl font-semibold'>Informacion Personal</h3>
 
       <div>
         <ul className=''>

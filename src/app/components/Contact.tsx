@@ -2,7 +2,7 @@ import React from "react";
 import Form from "./Form";
 
 import Image from "next/image";
-import { PersonalInformation } from "./PersonalInformation";
+
 
 function Contact() {
   return (
