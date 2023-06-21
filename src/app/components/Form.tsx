@@ -1,6 +1,8 @@
 import React from "react";
-
+import useForm from "@/hooks/useForm";
 const Form = () => {
+
+  const {handleSubmit, handleChange, data} = useForm();
   return (
     <div
       className="
@@ -14,9 +16,13 @@ const Form = () => {
       <h3 className="text-2xl pb-5">Enviame un mensaje</h3>
       </div>
       
-      <form className="flex flex-col w-3/4">
+      <form 
+      onSubmit={handleSubmit}
+      className="flex flex-col w-3/4">
         <div className=" mb-3">
           <input
+            onChange={handleChange}
+            name="subject"
             type="text"
             className="
             border-x-2
@@ -35,6 +41,8 @@ const Form = () => {
 
         <div className="mt-2">
           <input
+          onChange={handleChange}
+            name="email"
             type="text"
             className="
             border-x-2
@@ -53,6 +61,8 @@ const Form = () => {
 
         <div className="mt-4">
           <textarea
+          onChange={handleChange}
+          name="message"
             placeholder="Mensaje"
             className="
             border-x-2
