@@ -18,8 +18,21 @@ const [data, setData] = useState({
 
     const handleSubmit = async (e:any) => {
         e.preventDefault();
-        const res = await axios.post("../app/api/sendMail/sendMail", data)
-        .then(res => console.log(res))
+        try {
+            const res = await fetch('api/contact', {
+                method: 'POST',
+                body:JSON.stringify({
+                    data
+                }),
+                headers: {
+                    'content-type': 'application/json',
+                }
+
+            })
+        } catch (error) {
+            console.log(error)
+        }
+        
 
 
     }
