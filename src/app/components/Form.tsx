@@ -21,6 +21,7 @@ const Form = () => {
       className="flex flex-col w-3/4">
         <div className=" mb-3">
           <input
+            value={data.subject || ''}
             onChange={handleChange}
             name="subject"
             type="text"
@@ -42,6 +43,7 @@ const Form = () => {
         <div className="mt-2">
           <input
           onChange={handleChange}
+            value={data.email || ''}
             name="email"
             type="text"
             className="
@@ -61,6 +63,7 @@ const Form = () => {
 
         <div className="mt-4">
           <textarea
+          value={data.message || ''}
           onChange={handleChange}
           name="message"
             placeholder="Mensaje"

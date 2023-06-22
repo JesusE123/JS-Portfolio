@@ -13,7 +13,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       service: "Gmail",
       auth: {
         user: "jesusan0110@gmail.com",
-        
+        pass: 'ookudpqotygbxtyj'
       },
     });
 
@@ -25,7 +25,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     };
 
     try {
-      await transporter.sendMail(contentMail);
+     await transporter.sendMail(contentMail);
       return res.status(200).json({ hola: "mundo" });
     } catch (error) {
       return res.status(400).json({ error: "por aca no papa" });
