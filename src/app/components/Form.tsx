@@ -1,8 +1,16 @@
 import React from "react";
+import {Formik, FormikErrors} from 'formik'
 import useForm from "@/hooks/useForm";
+
+interface FormValues {
+  email: string;
+  password: string;
+  message:string;
+}
+
 const Form = () => {
 
-  const {handleSubmit, handleChange, data} = useForm();
+ const {handleData} =  useForm()
   return (
     <div
       className="
@@ -15,13 +23,41 @@ const Form = () => {
       <div className="flex items-start w-3/4 py-5">
       <h3 className="text-2xl pb-5">Enviame un mensaje</h3>
       </div>
-      
+      <Formik
+      initialValues={{
+        subject:'', email:'', message:''
+      }}
+      validate={values => {
+        const errors: FormikErrors<FormValues> = {};
+        if (!values.email) {
+          errors.email = 'Required';
+        } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+          errors.email = 'invalid email address'
+        }
+        return errors;
+      }}
+      onSubmit={(values, { setSubmitting, resetForm }) => {
+        setTimeout(() => {
+          handleData(values)
+          resetForm()
+          setSubmitting(false);
+        }, 400);
+      }}
+      >
+         {({
+         values,
+         errors,
+         touched,
+         handleChange,
+         handleSubmit,
+         isSubmitting,
+       }) => (
       <form 
       onSubmit={handleSubmit}
       className="flex flex-col w-3/4">
         <div className=" mb-3">
           <input
-            value={data.subject || ''}
+            value={values.subject}
             onChange={handleChange}
             name="subject"
             type="text"
@@ -38,35 +74,36 @@ const Form = () => {
             "
             placeholder="Asunto"
           />
+           {errors.subject && touched.subject && errors.subject}
         </div>
 
         <div className="mt-2">
           <input
-          onChange={handleChange}
-            value={data.email || ''}
+            value={values.email}
+            onChange={handleChange}
             name="email"
-            type="text"
+            type="email"
             className="
             border-x-2
             border-b-2
-      
-        border-gray-500
-        shadow.lg
-        rounded-lg
-        px-2
-        py-2
-        w-full
+           border-gray-500
+            shadow.lg
+            rounded-lg
+            px-2
+            py-2
+            w-full
         "
             placeholder="Email"
           />
+          {errors.email && touched.email && errors.email}
         </div>
 
         <div className="mt-4">
           <textarea
-          value={data.message || ''}
+          value={values.message}
           onChange={handleChange}
           name="message"
-            placeholder="Mensaje"
+          placeholder="Mensaje"
             className="
             border-x-2
             border-b-2
@@ -77,11 +114,15 @@ const Form = () => {
           w-full
           px-2
           "
-          ></textarea>
+          >
+          </textarea>
+          {errors.message && touched.message && errors.message}
         </div>
 
         <button
-          className="
+        type="submit"
+        disabled={isSubmitting}
+        className="
         border
         border-gray-500
         bg-transparent
@@ -96,6 +137,8 @@ const Form = () => {
           Enviar
         </button>
       </form>
+       )}
+      </Formik>
     </div>
   );
 };

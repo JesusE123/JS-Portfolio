@@ -1,32 +1,17 @@
 import React, { useState } from "react";
 import axios from "axios";
 const useForm = () => {
-  const [data, setData] = useState({
-    subject: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (e: any) => {
-    setData({
-      ...data,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
-    axios
-      .post("/api/contact", data)
+  const [data, setData] = useState({});
+    
+  const handleData = async (values) => {
+    axios.post("/api/contact", values)
       .then((res) => setData(res.data))
-      .catch((error) => console.log(error));
-    setData({
-      subject: "",
-      email: "",
-      message: "",
-    });
+      .catch((error) => {
+          console.log(error)
+      });
+      setData({});
   };
-  return { handleChange, data, handleSubmit };
+  return { handleData};
 };
 
 export default useForm;
