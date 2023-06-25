@@ -12,16 +12,26 @@ import { motion } from "framer-motion";
 
 import { BsArrowDownShort } from "react-icons/bs";
 import { PersonalInformation } from "./components/PersonalInformation";
+import { useEffect,useState } from "react";
 
 export default function Home() {
-
+  const [mounted, setMounted] = useState(false);
   const {theme, setTheme} = useTheme()
+  const light = theme === "light";
 
 
- const light = theme === "light";
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
+
   return (
     <>
-      {/* Header */}
+      
       <div
         className="
     mt-10
@@ -32,8 +42,8 @@ export default function Home() {
         <Header />
       </div>
 
-      {/* presentation */}
-      <motion.div
+      
+      <div
         className="
     flex
     items-center
@@ -44,9 +54,7 @@ export default function Home() {
         <div className="flex justify-center">
           <Presentation />
         </div>
-        <motion.div
-          animate={{ x: [0, 100, 0] }}
-          transition={{ ease: [0.5, 0.71, 1, 1.5], duration: 2 }}
+        <div
           className="w-2/4"
         >
           <Image
@@ -56,8 +64,8 @@ export default function Home() {
             height={30}
             className="rounded shadow-lg"
           />
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
       <div
         className="

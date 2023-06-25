@@ -7,7 +7,8 @@ import {IoLogoJavascript} from 'react-icons/io'
 import {BsFillBootstrapFill} from 'react-icons/bs'
 import {SiReact,SiJest,SiTailwindcss,SiJquery, SiTypescript} from 'react-icons/si'
 import {TbBrandNextjs} from 'react-icons/tb'
-import {BsArrowDownShort} from 'react-icons/bs'
+
+import { useTheme } from "next-themes";
 
 const skills = [
   {id: 1, icon:  <AiFillHtml5 />},
@@ -24,7 +25,13 @@ const skills = [
 
 
 
+
+
 const Skills = () => {
+  const {theme} = useTheme();
+
+
+  const light = theme === "light";
   return (
     <div id='skills'>
         <div>
@@ -34,10 +41,21 @@ const Skills = () => {
 
         <div >
     
-            <ul className='flex flex-row space-x-8 mt-5 text-4xl'>
+            <ul className='
+            flex 
+            flex-row 
+            space-x-8 
+            mt-5 
+            text-4xl
+            '>
               {
                 skills.map((icon, index) => (
-                  <li key={index}>{icon.icon}</li>
+                  <li 
+                  key={index}
+                  className={light ? 'border border-blue-950 rounded py-2 px-2' : 'border border-[#88ffcc] rounded py-2 px-2'}
+                  >
+                    {icon.icon}
+                  </li>
                 ))
               }
             </ul>

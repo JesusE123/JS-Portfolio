@@ -1,23 +1,20 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import SocialContact from './SocialContact'
-import { motion } from 'framer-motion'
+
 import { useTheme } from "next-themes";
 
 const Presentation = () => {
-  const {theme, setTheme} = useTheme()
-  const light = theme === "light";
+ 
+ 
+  const {theme} = useTheme()
+  const light = theme === 'light'
+ 
+
+  
   return (
-    <motion.div 
+    <div 
     id='presentation' 
     className='w-2/4'
-    animate={{ x: [50, 150, 1], opacity: 1, scale: 1 }}
-      transition={{
-          duration: 3,
-          delay: 0.1,
-          ease: [0.5, 0.71, 1, 1.5],
-      }}
-      initial={{ opacity: 0, scale: 0.5 }}
-      
     >
 
       <h1 className={ light ? 'text-9xl font-bold  text-blue-950' : 'text-9xl font-bold text-[#88ffcc]'}>Jesús</h1>
@@ -60,7 +57,7 @@ const Presentation = () => {
       </div>
 
    
-    </motion.div>
+    </div>
   )
 }
 

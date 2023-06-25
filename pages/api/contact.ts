@@ -15,14 +15,14 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     port: 465,
     secure: true,
     auth: {
-      user: "jesusan0110@gmail.com",
+      user: process.env.EMAIL,
       pass: process.env.API_KEY
     },
   });
 
   const contentMail = {
-    from: "jesusan0110@gmail.com",
-    to: "jesusan0110@gmail.com",
+    from: process.env.EMAIL,
+    to: process.env.EMAIL,
     subject: subject,
     text: `Correo de: ${email}\n\n${message}`,
   };
