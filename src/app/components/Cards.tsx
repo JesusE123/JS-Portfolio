@@ -22,7 +22,7 @@ const Cards: React.FC<cardProps> = ({
 }) => {
   return (
     <div id='Proyectos'>
-        <Card sx={{ maxWidth: 345 }} className='hover:scale-125'>
+        <Card sx={{ maxWidth: 345 }} className=''>
         <CardMedia
         sx={{ height: 140 }}
         image={image}
@@ -37,7 +37,7 @@ const Cards: React.FC<cardProps> = ({
         </Typography>
       </CardContent>
       <CardActions>
-       <Link href={`${path}`} className='mx-4 hover:opacity-40 transition cursor-pointer'>
+       <Link href={`${path}`} className='mx-4 hover:opacity-40 cursor-pointer transition duration-700 ease-in-out '>
           Ver proyecto
        </Link>
       </CardActions>

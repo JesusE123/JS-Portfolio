@@ -8,7 +8,7 @@ import Contact from "./components/Contact";
 import Copyright from "./components/Copyright";
 
 import { useTheme } from "next-themes";
-import { motion } from "framer-motion";
+
 
 import { BsArrowDownShort } from "react-icons/bs";
 import { PersonalInformation } from "./components/PersonalInformation";
@@ -99,7 +99,7 @@ export default function Home() {
         justify-center 
         items-center
         font-semibold
-        mt-5
+        mt-2
         min-h-[70vh]"
       >
         <Projects />

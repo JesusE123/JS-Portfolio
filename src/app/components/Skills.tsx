@@ -42,17 +42,22 @@ const Skills = () => {
         <div >
     
             <ul className='
-            flex 
-            flex-row 
-            space-x-8 
-            mt-5 
-            text-4xl
-            '>
+           grid 
+           grid-cols-5 
+           gap-8 
+           mt-10
+           text-4xl
+           content-center
+           h-56
+           '
+           
+            >
               {
                 skills.map((icon, index) => (
                   <li 
                   key={index}
-                  className={light ? 'border border-blue-950 rounded py-2 px-2' : 'border border-[#88ffcc] rounded py-2 px-2'}
+                  className={light ? 'border border-blue-950 rounded py-2 px-2 ' : 'border border-[#88ffcc] rounded py-2 px-2'}
+                  
                   >
                     {icon.icon}
                   </li>

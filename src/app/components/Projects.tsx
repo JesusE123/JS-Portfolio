@@ -32,7 +32,7 @@ const Projects = () => {
       <div className='flex 
       flex-row 
       space-x-8 
-      mt-5
+      mt-10
       '>
         {
           projects.map((element, index) => (
