@@ -34,9 +34,11 @@ export default function Home() {
       
       <div
         className="
-    mt-10
     flex
+    justify-center
     items-center
+    h-16
+    mt-5
     "
       >
         <Header />
@@ -55,12 +57,12 @@ export default function Home() {
           <Presentation />
         </div>
         <div
-          className="w-2/4"
+          className="flex justify-center"
         >
           <Image
             src="/logo.png"
             alt="logo"
-            width={350}
+            width={400}
             height={30}
             className="rounded shadow-lg"
           />

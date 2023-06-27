@@ -3,6 +3,7 @@ import axios from "axios";
 import * as Yup from 'yup';
 const useForm = () => {
   const [data, setData] = useState({});
+  const [mensaje, setMensaje] = useState('')
   
 
 
@@ -29,7 +30,7 @@ const useForm = () => {
       });
       setData({});
   };
-  return { handleData, SignupSchema};
+  return { handleData, SignupSchema, setMensaje, mensaje};
 };
 
 export default useForm;

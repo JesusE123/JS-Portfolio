@@ -27,7 +27,7 @@ const Header = () => {
     'fixed inset-x-0 mx-auto flex justify-between' }
     
     >
-        <div>
+        <div className='flex items-center'>
             <h1 className='text-bold text-5xl ml-10'>JS</h1>
         </div>
         <div>

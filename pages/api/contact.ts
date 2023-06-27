@@ -29,9 +29,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
   try {
     await transporter.sendMail(contentMail);
-    return res.status(200).json({ hola: "mundo" });
+    return res.status(200).json({ message:"su correo fue enviado con exito" });
   } catch (error) {
-    return res.status(400).json({ error: "por aca no papa" });
+    return res.status(400).json({ error: "El correo no pudo ser enviado" });
   }
 }
 

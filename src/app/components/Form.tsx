@@ -1,5 +1,6 @@
-import React from "react";
-import { Formik, FormikErrors } from 'formik'
+import React, { useState, useEffect } from "react";
+import { Formik } from 'formik'
+import { useTheme } from 'next-themes'
 
 import useForm from "@/hooks/useForm";
 
@@ -10,7 +11,25 @@ interface FormValues {
 }
 
 const Form = () => {
-  const { handleData, SignupSchema} = useForm()
+  const { handleData, SignupSchema, mensaje, setMensaje } = useForm()
+
+  const { theme } = useTheme()
+  const light = theme === 'light'
+
+  useEffect(() => {
+    let timer;
+    if (mensaje) {
+      timer = setTimeout(() => {
+        setMensaje('');
+      }, 3000);
+    }
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [mensaje]);
+
+
   return (
     <div
       className="
@@ -31,6 +50,7 @@ const Form = () => {
         onSubmit={(values, { setSubmitting, resetForm }) => {
           setTimeout(() => {
             handleData(values)
+            setMensaje('Su mensaje ha sido enviado')
             resetForm()
             setSubmitting(false);
           }, 400);
@@ -121,24 +141,18 @@ const Form = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="
-        border
-        border-[#88ffcc]
-        bg-transparent
-        cursor-pointer
-        transition
-        hover:opacity-50
-        w-full
-        rounded
-        py-4
-        font-semibold
-        "
+              className={light ? 'border border-blue-950  bg-transparent  cursor-pointer transition hover:opacity-50  w-full  rounded  py-4 font-semibold'
+                : 'border border-[#88ffcc]  bg-transparent  cursor-pointer transition hover:opacity-50  w-full  rounded  py-4 font-semibold'}
             >
               Enviar
             </button>
+            {mensaje && <p className="bg-green-500 rounded mt-2">{mensaje}</p>}
           </form>
+
         )}
+
       </Formik>
+
     </div>
   );
 };
