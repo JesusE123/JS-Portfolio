@@ -19,9 +19,9 @@ const DowloadCv = () => {
     <div className='flex items-center'>
       <button 
       onClick={handleDownload}
-      className={light ? ' bg-transparent border border-blue-950   rounded   px-2 py-1  hover:bg-slate-500 shadow-lg ' 
+      className={light ? ' bg-transparent border border-blue-950   rounded   px-2 py-1  hover:bg-slate-500 shadow-lg transition ease-in-out delay-400 duration-300 ' 
       : 
-                        'bg-transparent border border-[#88ffcc]  rounded   px-2 py-1  hover:bg-slate-500 shadow-lg'}>
+                        'bg-transparent border border-[#88ffcc]  rounded   px-2 py-1  hover:bg-slate-500 shadow-lg transition ease-in-out delay-400 duration-300'}>
         Descargar cv
 
       </button>

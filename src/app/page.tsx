@@ -9,16 +9,14 @@ import Copyright from "./components/Copyright";
 
 import { useTheme } from "next-themes";
 
-
 import { BsArrowDownShort } from "react-icons/bs";
 import { PersonalInformation } from "./components/PersonalInformation";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
-  const {theme, setTheme} = useTheme()
+  const { theme, setTheme } = useTheme();
   const light = theme === "light";
-
 
   useEffect(() => {
     setMounted(true);
@@ -28,10 +26,8 @@ export default function Home() {
     return null;
   }
 
-
   return (
     <>
-      
       <div
         className="
     flex
@@ -44,27 +40,52 @@ export default function Home() {
         <Header />
       </div>
 
-      
       <div
         className="
     flex
     items-center
     min-h-[70vh]
     mt-10
+    w-full
+    max-sm:block
     "
       >
-        <div className="flex justify-center">
+        <div
+          className="
+        flex 
+        justify-center 
+        w-3/6 
+        max-sm:w-full
+        max-sm:flex
+        max-sm:justify-start
+        max-sm:px-10
+        
+        "
+        >
           <Presentation />
         </div>
         <div
-          className="flex justify-center"
+          className="
+        flex 
+        justify-center 
+        w-3/6 
+        max-sm:flex
+        max-sm:justify-center
+        max-sm:w-full
+        max-sm:px-10
+        max-sm:mt-5
+        
+        "
         >
           <Image
             src="/logo.png"
             alt="logo"
-            width={400}
+            width={500}
             height={30}
-            className="rounded shadow-lg"
+            className="
+            rounded 
+            shadow-lg 
+            "
           />
         </div>
       </div>
@@ -75,7 +96,7 @@ export default function Home() {
           flex 
           justify-center
           text-5xl
-          
+          max-sm:mt-10
           "
       >
         <BsArrowDownShort className="animate-bounce" />
@@ -116,18 +137,19 @@ export default function Home() {
         <Contact />
       </div>
 
-
-      <div className=
-      {light ? ' min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-black text-white' 
-      : 
-      'min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-white text-black'}>
+      <div
+        className={
+          light
+            ? " min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-black text-white"
+            : "min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-white text-black"
+        }
+      >
         <div className="flex justify-center">
           <Copyright />
         </div>
         <div className="flex justify-center">
           <PersonalInformation />
         </div>
-
       </div>
     </>
   );
