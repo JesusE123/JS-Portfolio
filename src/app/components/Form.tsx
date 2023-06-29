@@ -38,7 +38,15 @@ const Form = () => {
      py-2
     "
     >
-      <div className="flex items-start w-3/4 py-5">
+      <div
+        className="
+      flex 
+      items-start
+       w-3/4 
+       py-5
+       max-sm:py-0
+       "
+      >
         <h3 className="text-2xl pb-5">Enviame un mensaje</h3>
       </div>
       <Formik
@@ -132,7 +140,7 @@ const Form = () => {
               className={
                 light
                   ? "border border-blue-950  bg-transparent  cursor-pointer transition hover:opacity-50  w-full  rounded  py-4 font-semibold mt-3"
-                  : "border border-[#88ffcc]  bg-transparent  cursor-pointer transition hover:opacity-50  w-full  rounded  py-4 font-semibold mt-"
+                  : "border border-[#88ffcc]  bg-transparent  cursor-pointer transition hover:opacity-50  w-full  rounded  py-4 font-semibold mt-3"
               }
             >
               Enviar

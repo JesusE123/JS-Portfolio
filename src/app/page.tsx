@@ -140,14 +140,14 @@ export default function Home() {
       <div
         className={
           light
-            ? " min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-black text-white"
-            : "min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-white text-black"
+            ? " min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-black text-white max-sm:grid max-sm:grid-cols-1"
+            : "min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-white text-black max-sm:grid max-sm:grid-cols-1"
         }
       >
-        <div className="flex justify-center">
+        <div className="flex justify-center max-sm:justify-start max-sm:px-3 max-sm:mt-4">
           <Copyright />
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center max-sm:justify-start max-sm:px-3 max-sm:mt-4">
           <PersonalInformation />
         </div>
       </div>
