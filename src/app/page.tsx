@@ -45,20 +45,29 @@ export default function Home() {
     flex
     items-center
     min-h-[70vh]
-    mt-10
-    w-full
     max-sm:block
+    md:flex
+    md:flex-col
+    md:min-h-[30vh]
+    xl:flex
+    xl:flex-row
+   
+
     "
       >
         <div
           className="
-        flex 
-        justify-center 
-        w-3/6 
+        xl:flex 
+        xl:justify-center 
+        xl:w-3/6
         max-sm:w-full
         max-sm:flex
         max-sm:justify-start
         max-sm:px-10
+        md:w-full
+        md:flex
+        md:justify-center
+        
         
         "
         >
@@ -68,12 +77,14 @@ export default function Home() {
           className="
         flex 
         justify-center 
-        w-3/6 
+        xl:w-3/6 
         max-sm:flex
         max-sm:justify-center
         max-sm:w-full
         max-sm:px-10
         max-sm:mt-5
+        md:w-full
+        md:mt-10
         
         "
         >
@@ -97,6 +108,7 @@ export default function Home() {
           justify-center
           text-5xl
           max-sm:mt-10
+          md:mt-10
           "
       >
         <BsArrowDownShort className="animate-bounce" />
@@ -111,6 +123,8 @@ export default function Home() {
         font-semibold
         mt-5
         min-h-[70vh]
+        md:min-h-[60vh]
+        md:mt-10
         "
       >
         <Skills />
@@ -123,7 +137,9 @@ export default function Home() {
         items-center
         font-semibold
         mt-2
-        min-h-[70vh]"
+        min-h-[70vh]
+        md-h-[60vh]
+        "
       >
         <Projects />
       </div>

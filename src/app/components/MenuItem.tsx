@@ -1,11 +1,26 @@
+import Link from "next/link";
 import react from "react";
 
 interface MenuItemProps {
-  label: string;
+  label?: string;
+  href: string;
 }
 
-const menuItem: React.FC<MenuItemProps> = ({ label }) => {
-  return <div className="">{label}</div>;
+const MenuItem: React.FC<MenuItemProps> = ({ label, href }) => {
+  return (
+    <div
+      className="
+    flex
+    flex-col
+    hover:opacity-50
+    transition
+    cursor-pointer
+    
+    "
+    >
+      <Link href={href}>{label}</Link>
+    </div>
+  );
 };
 
-export default menuItem;
+export default MenuItem;

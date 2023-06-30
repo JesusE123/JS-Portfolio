@@ -9,6 +9,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { useTheme } from "next-themes";
 import useHeader from "@/hooks/useHeader";
 import MobileMenu from "./MobileMenu";
+import MenuItem from "./MenuItem";
 
 const Header = () => {
   const { theme } = useTheme();
@@ -26,13 +27,14 @@ const Header = () => {
       <div className="flex items-center">
         <h1 className="text-bold text-5xl ml-10">JS</h1>
       </div>
-      <div className="max-sm:hidden">
+      <div className="max-sm:hidden md:hidden xl:inline-flex">
         <Menu />
       </div>
 
       <div
         className="
-        lg:hidden 
+        xl:hidden
+        md:inline-flex
         sm:hidden 
         flex 
         flex-row
@@ -44,14 +46,19 @@ const Header = () => {
       >
         <div
           className=" 
-    hover:opacity-40
     cursor-pointer
-    transition"
+    transition
+    absolute
+    "
           onClick={toggleMobileMenu}
         >
           <AiOutlineMenu
             size={30}
-            className={light ? "text-blue-950" : "text-[#88ffcc]"}
+            className={
+              light
+                ? "text-blue-950 hover:opacity-40 transition"
+                : "text-[#88ffcc] hover:opacity-40 transition"
+            }
           />
           <MobileMenu visible={showMobileMenu} />
         </div>
@@ -69,7 +76,7 @@ const Header = () => {
           <ThemeSwitcher />
         </div>
 
-        <div className="max-sm:hidden">
+        <div className="max-sm:hidden md:hidden xl:inline-flex">
           <DowloadCv />
         </div>
       </div>

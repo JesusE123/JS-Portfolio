@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import MobileMenu from "./MobileMenu";
+
 const Menu = () => {
   return (
     <div className="h-16 flex items-center">
