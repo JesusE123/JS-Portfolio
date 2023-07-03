@@ -11,116 +11,125 @@ const Presentation = () => {
     <div
       id="presentation"
       className="
-    max-sm:w-full 
-    md:w-full
-    xl:flex
-    xl:flex-col
-    xl:justify-center
-    xl:w-full
-    
+    tablet:w-full 
+    tablet:mt-6
+    md:mt-6
+    laptop:flex
+    laptop:flex-col
+    laptop:justify-center
+    laptop:w-full
+    laptop:items-start
+    laptop:mt-4
     "
     >
       <div
         className="
-      
+      tablet:flex
+      tablet:justify-center
+      tablet:space-x-2
       md:flex
       md:flex-row
+      md:space-x-2
       md:justify-center
-      md:space-x-4
-      xl:flex
-      xl:flex-col
-      xl:space-x-0
-      xl:w-1/2
+      laptop:flex
+      laptop:flex-col
+      laptop:space-x-0
+   
+      
       "
       >
         <h1
           className={
             light
-              ? "xl:text-8xl xl:font-bold  text-blue-950 max-sm:text-5xl md:text-6xl "
-              : "xl:text-8xl xl:font-bold text-[#88ffcc] max-sm:text-5xl md:text-6xl "
+              ? "laptop:text-7xl laptop:font-semibold  text-blue-950 tablet:text-5xl md:text-6xl"
+              : "laptop:text-7xl laptop:font-semibold text-[#88ffcc] tablet:text-5xl md:text-6xl"
           }
         >
-          JESUS
+          JESÚS
         </h1>
-        <h1 className="xl:text-8xl xl:font-bold max-sm:text-5xl md:text-6xl">
+        <h1
+          className="
+          tablet:text-5xl 
+          md:text-6xl
+          laptop:text-6xl
+          xl:text-7xl 
+          xl:font-semibold
+        "
+        >
           SANCHEZ
         </h1>
       </div>
       <div
         className="
+          tablet:flex
+          tablet:justify-center
           md:flex
-          md:w-full
           md:justify-center
-          xl:flex
-          xl:justify-start
-          xl:w-auto
+          laptop:flex
+          laptop:justify-center
+          laptop:py-0
+          
           
       "
       >
         <span
           className="
-      text-4xl
-      text-gray-500
-      font-semibold
-      pt-2
+       text-4xl
        mb-5
        opacity-100
-       max-sm:text-2xl
+       tablet:text-2xl
+
       "
         >
           Frontend Developer Jr
         </span>
       </div>
+
       <div
         className="
-      md:w-full
+      tablet:flex
+      tablet:justify-center
       md:flex
       md:justify-center
-      xl:flex
-      xl:justify-start
+      laptop:flex
+      laptop:justify-start
+      laptop:w-full
       "
       >
         <div
           className="
-      
-      md:w-3/6
-      md:flex
-      md:justify-center
-      md:flex-col
-      xl:w-3/6
+      tablet:w-2/3
+      md:w-2/3
+      laptop:w-3/4
+      laptop:flex
+      laptop:justify-start
+      laptop:items-start
       "
         >
           <p
             className="
        text-gray-500
        font-semibold
-
+        
       "
           >
             Soy un desarrollador web apasionado por la tecnologia, por la
-            innovacion y por todo lo que nos tiene el futuro en el mundo IT.
-          </p>
-
-          <p
-            className="
-      text-gray-500
-      font-semibold
-      mt-2
-      "
-          >
-            Me encuentro en busqueda de mi primer desafio como desarrollador web
-            y asi poder seguir ampliando mi conocimiento y continuar con mi
-            aprendizaje.
+            innovacion y por todo lo que nos tiene el futuro en el mundo IT.{" "}
+            <br /> Me encuentro en busqueda de mi primer desafio como
+            desarrollador web y asi poder seguir ampliando mi conocimiento y
+            continuar con mi aprendizaje.
           </p>
         </div>
       </div>
 
       <div
         className="
+      tablet:flex
+      tablet:justify-center
       md:flex
       md:justify-center
-      xl:flex
-      xl:justify-start
+      laptop:flex
+      laptop:justify-center
       "
       >
         <SocialContact />

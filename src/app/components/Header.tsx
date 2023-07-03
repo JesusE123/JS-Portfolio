@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import Menu from "./Menu";
 import DowloadCv from "./DowloadCv";
@@ -9,7 +9,6 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { useTheme } from "next-themes";
 import useHeader from "@/hooks/useHeader";
 import MobileMenu from "./MobileMenu";
-import MenuItem from "./MenuItem";
 
 const Header = () => {
   const { theme } = useTheme();
@@ -27,20 +26,19 @@ const Header = () => {
       <div className="flex items-center">
         <h1 className="text-bold text-5xl ml-10">JS</h1>
       </div>
-      <div className="max-sm:hidden md:hidden xl:inline-flex">
+      <div className="tablet:hidden md:hidden laptop:hidden">
         <Menu />
       </div>
 
       <div
         className="
-        xl:hidden
-        md:inline-flex
-        sm:hidden 
+        tablet:w-full
+        md:w-full
+        laptop:w-full
         flex 
         flex-row
          items-center 
          justify-end 
-         w-full
        
       "
       >
@@ -49,6 +47,7 @@ const Header = () => {
     cursor-pointer
     transition
     absolute
+    desktop:hidden
     "
           onClick={toggleMobileMenu}
         >
@@ -76,7 +75,7 @@ const Header = () => {
           <ThemeSwitcher />
         </div>
 
-        <div className="max-sm:hidden md:hidden xl:inline-flex">
+        <div className="tablet:hidden md:hidden laptop:hidden">
           <DowloadCv />
         </div>
       </div>

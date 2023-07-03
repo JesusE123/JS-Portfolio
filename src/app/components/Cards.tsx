@@ -16,21 +16,21 @@ interface cardProps {
 
 const Cards: React.FC<cardProps> = ({ name, path, image, description }) => {
   return (
-    <div id="Proyectos">
-      <Card sx={{ maxWidth: 345 }} className="max-sm:w-28 max-sm:h-full">
+    <div id="Proyectos" className="laptop:px-2">
+      <Card sx={{ maxWidth: 345 }} className="tablet:w-28 tablet:h-full">
         <CardMedia sx={{ height: 140 }} image={image} title="logo image" />
         <CardContent>
           <Typography
             gutterBottom
             component="div"
-            className="max-sm:text-sm max-sm:flex"
+            className="tablet:text-sm tablet:flex"
           >
             {name}
           </Typography>
           <Typography
             variant="body2"
             color="text.secondary"
-            className="max-sm:truncate"
+            className="tablet:truncate"
           >
             {description}
           </Typography>

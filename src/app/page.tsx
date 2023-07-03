@@ -15,7 +15,7 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
   const light = theme === "light";
 
   useEffect(() => {
@@ -42,31 +42,26 @@ export default function Home() {
 
       <div
         className="
-    flex
-    items-center
-    min-h-[70vh]
-    max-sm:block
-    md:flex
-    md:flex-col
-    md:min-h-[30vh]
-    xl:flex
-    xl:flex-row
-   
+    tablet:block
+    laptop:flex
+    laptop:justify-evenly
+    laptop:items-center
+    laptop:min-h-[70vh]
+    laptop:flex-row
 
     "
       >
         <div
           className="
-        xl:flex 
-        xl:justify-center 
-        xl:w-3/6
-        max-sm:w-full
-        max-sm:flex
-        max-sm:justify-start
-        max-sm:px-10
-        md:w-full
-        md:flex
-        md:justify-center
+        tablet:w-full
+        tablet:flex
+        tablet:justify-center
+        tablet:px-10
+        laptop:flex 
+        laptop:justify-center 
+        laptop:w-3/6
+        
+       
         
         
         "
@@ -75,27 +70,29 @@ export default function Home() {
         </div>
         <div
           className="
-        flex 
-        justify-center 
-        xl:w-3/6 
-        max-sm:flex
-        max-sm:justify-center
-        max-sm:w-full
-        max-sm:px-10
-        max-sm:mt-5
-        md:w-full
+        tablet:flex
+        tablet:justify-center
+        tablet:w-full
+        tablet:px-10
+        tablet:mt-10
+        md:flex
+        md:justify-center
         md:mt-10
+        laptop:w-1/3
+        
+       
         
         "
         >
           <Image
             src="/logo.png"
             alt="logo"
-            width={500}
+            width={450}
             height={30}
             className="
             rounded 
-            shadow-lg 
+            shadow-lg
+            laptop:w-96
             "
           />
         </div>
@@ -107,7 +104,7 @@ export default function Home() {
           flex 
           justify-center
           text-5xl
-          max-sm:mt-10
+          tablet:mt-10
           md:mt-10
           "
       >
@@ -156,14 +153,14 @@ export default function Home() {
       <div
         className={
           light
-            ? " min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-black text-white max-sm:grid max-sm:grid-cols-1"
-            : "min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-white text-black max-sm:grid max-sm:grid-cols-1"
+            ? " min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-black text-white tablet:grid tablet:grid-cols-1"
+            : "min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-white text-black tablet:grid tablet:grid-cols-1"
         }
       >
-        <div className="flex justify-center max-sm:justify-start max-sm:px-3 max-sm:mt-4">
+        <div className="flex justify-center tablet:justify-center tablet:px-3 tablet:mt-4">
           <Copyright />
         </div>
-        <div className="flex justify-center max-sm:justify-start max-sm:px-3 max-sm:mt-4">
+        <div className="flex justify-center tablet:justify-center tablet:px-3 tablet:mt-4">
           <PersonalInformation />
         </div>
       </div>
