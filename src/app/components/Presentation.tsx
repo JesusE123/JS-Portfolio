@@ -20,6 +20,11 @@ const Presentation = () => {
     laptop:w-full
     laptop:items-start
     laptop:mt-4
+    desktop:flex
+    desktop:flex-col
+    desktop:justify-center
+    
+    
     "
     >
       <div
@@ -34,15 +39,15 @@ const Presentation = () => {
       laptop:flex
       laptop:flex-col
       laptop:space-x-0
-   
+      
       
       "
       >
         <h1
           className={
             light
-              ? "laptop:text-7xl laptop:font-semibold  text-blue-950 tablet:text-5xl md:text-6xl"
-              : "laptop:text-7xl laptop:font-semibold text-[#88ffcc] tablet:text-5xl md:text-6xl"
+              ? "laptop:text-7xl  text-blue-950 tablet:text-5xl md:text-6xl desktop:text-7xl"
+              : "laptop:text-7xl  text-[#88ffcc] tablet:text-5xl md:text-6xl desktop:text-7xl"
           }
         >
           JESÚS
@@ -52,8 +57,8 @@ const Presentation = () => {
           tablet:text-5xl 
           md:text-6xl
           laptop:text-6xl
-          xl:text-7xl 
-          xl:font-semibold
+          desktop:text-7xl 
+          
         "
         >
           SANCHEZ
@@ -68,6 +73,7 @@ const Presentation = () => {
           laptop:flex
           laptop:justify-center
           laptop:py-0
+          
           
           
       "
@@ -104,20 +110,21 @@ const Presentation = () => {
       laptop:flex
       laptop:justify-start
       laptop:items-start
+      desktop:w-96
       "
         >
           <p
             className="
-       text-gray-500
-       font-semibold
+      
+       flex
         
       "
           >
             Soy un desarrollador web apasionado por la tecnologia, por la
-            innovacion y por todo lo que nos tiene el futuro en el mundo IT.{" "}
-            <br /> Me encuentro en busqueda de mi primer desafio como
-            desarrollador web y asi poder seguir ampliando mi conocimiento y
-            continuar con mi aprendizaje.
+            innovacion y por todo lo que nos tiene el futuro en el mundo IT. Me
+            encuentro en busqueda de mi primer desafio como desarrollador web y
+            asi poder seguir ampliando mi conocimiento y continuar con mi
+            aprendizaje.
           </p>
         </div>
       </div>
@@ -130,6 +137,7 @@ const Presentation = () => {
       md:justify-center
       laptop:flex
       laptop:justify-center
+      desktop:w-80
       "
       >
         <SocialContact />

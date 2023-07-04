@@ -3,8 +3,14 @@ import Link from "next/link";
 
 const Menu = () => {
   return (
-    <div className="h-16 flex items-center">
-      <ul className="flex flex-row space-x-8 items-center ml-12 text-xl">
+    <div
+      className="
+    desktop:h-16
+    desktop:flex
+    desktop:items-center
+    "
+    >
+      <ul className="flex flex-row space-x-8 items-center text-xl">
         <li className="hover:bg-slate-500 rounded px-1 transition">
           <Link href="/#presentation">Sobre mi</Link>
         </li>

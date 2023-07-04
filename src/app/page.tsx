@@ -30,11 +30,11 @@ export default function Home() {
     <>
       <div
         className="
-    flex
-    justify-center
-    items-center
-    h-16
-    mt-5
+    desktop:flex
+    desktop:justify-center
+    desktop:items-center
+    desktop:h-16
+    desktop:mt-5
     "
       >
         <Header />
@@ -48,6 +48,10 @@ export default function Home() {
     laptop:items-center
     laptop:min-h-[70vh]
     laptop:flex-row
+    desktop:flex
+    desktop:flex-row
+    desktop:min-h-[70vh]
+    
 
     "
       >
@@ -60,9 +64,9 @@ export default function Home() {
         laptop:flex 
         laptop:justify-center 
         laptop:w-3/6
-        
-       
-        
+        desktop:w-2/4
+        desktop:flex
+        desktop:justify-center
         
         "
         >
@@ -79,6 +83,11 @@ export default function Home() {
         md:justify-center
         md:mt-10
         laptop:w-1/3
+        desktop:w-2/4
+        desktop:flex
+        desktop:justify-center
+        desktop:items-center
+        
         
        
         
@@ -93,6 +102,7 @@ export default function Home() {
             rounded 
             shadow-lg
             laptop:w-96
+            desktop:h-96
             "
           />
         </div>

@@ -19,12 +19,12 @@ const Header = () => {
     <div
       className={
         background
-          ? "fixed inset-x-0 mx-auto flex justify-between shadow-xl shadow-transparent"
-          : "fixed inset-x-0 mx-auto flex justify-between"
+          ? "desktop:fixed desktop:inset-x-0 desktop:flex desktop:justify-between"
+          : "desktop:fixed desktop:inset-x-0 desktop:flex desktop:justify-between"
       }
     >
-      <div className="flex items-center">
-        <h1 className="text-bold text-5xl ml-10">JS</h1>
+      <div className="">
+        <h1 className="text-bold text-5xl">JS</h1>
       </div>
       <div className="tablet:hidden md:hidden laptop:hidden">
         <Menu />
@@ -35,10 +35,7 @@ const Header = () => {
         tablet:w-full
         md:w-full
         laptop:w-full
-        flex 
-        flex-row
-         items-center 
-         justify-end 
+        desktop:hidden
        
       "
       >
@@ -69,6 +66,7 @@ const Header = () => {
         flex-row
         items-center
         gap-2
+        desktop:w-auto
         "
       >
         <div>
