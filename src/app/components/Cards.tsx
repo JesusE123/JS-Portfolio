@@ -21,7 +21,7 @@ const Cards: React.FC<cardProps> = ({ name, path, image, description }) => {
         <CardMedia sx={{ height: 140 }} image={image} title="logo image" />
         <CardContent>
           <Typography
-            gutterBottom
+            variant="h6"
             component="div"
             className="tablet:text-sm tablet:flex"
           >

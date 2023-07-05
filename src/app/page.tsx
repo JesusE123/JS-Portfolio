@@ -30,11 +30,18 @@ export default function Home() {
     <>
       <div
         className="
+    tablet:mt-5
+    tablet:h-16   
+    md:mt-5
+    md:h-16
+    laptop:mt-6
     desktop:flex
     desktop:justify-center
     desktop:items-center
     desktop:h-16
     desktop:mt-5
+    
+
     "
       >
         <Header />

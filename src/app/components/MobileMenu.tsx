@@ -1,5 +1,6 @@
 import React from "react";
 import MenuItem from "./MenuItem";
+import DowloadCv from "./DowloadCv";
 
 interface MobileMenuProps {
   visible?: boolean;
@@ -10,7 +11,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ visible }) => {
     return null;
   }
   return (
-    <div className="h-full fixed right-1">
+    <div className="h-full fixed right-2">
       <div
         className="
       h-0
@@ -24,6 +25,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ visible }) => {
         <MenuItem label="Habilidades" href="/#skills" />
         <MenuItem label="Proyectos" href="/#Proyectos" />
         <MenuItem label="Contacto" href="/#Contact" />
+        <MenuItem label="Descargar cv" href="#" />
       </div>
     </div>
   );

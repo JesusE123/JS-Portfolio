@@ -19,12 +19,12 @@ const Header = () => {
     <div
       className={
         background
-          ? "desktop:fixed desktop:inset-x-0 desktop:flex desktop:justify-between"
-          : "desktop:fixed desktop:inset-x-0 desktop:flex desktop:justify-between"
+          ? "laptop:flex laptop:justify-between laptop:fixed laptop:w-full desktop:fixed desktop:items-center desktop:inset-x-0 desktop:flex desktop:justify-between  md:flex md:justify-between md:fixed md:w-full tablet:flex tablet:justify-between tablet:w-full tablet:fixed "
+          : "laptop:flex laptop:justify-between laptop:fixed laptop:w-full desktop:fixed desktop:items-center desktop:inset-x-0 desktop:flex desktop:justify-between  md:flex md:justify-between md:fixed md:w-full tablet:flex tablet:justify-between tablet:w-full tablet:fixed "
       }
     >
       <div className="">
-        <h1 className="text-bold text-5xl">JS</h1>
+        <h1 className="text-bold text-5xl ml-5">JS</h1>
       </div>
       <div className="tablet:hidden md:hidden laptop:hidden">
         <Menu />
@@ -33,9 +33,19 @@ const Header = () => {
       <div
         className="
         tablet:w-full
-        md:w-full
-        laptop:w-full
+        tablet:justify-end
+        tablet:items-center
+        tablet:flex
         desktop:hidden
+        md:flex
+        md:w-full
+        md:justify-end
+        md:items-center
+        laptop:flex
+        laptop:w-full
+        laptop:justify-end
+        laptop:items-center
+        
        
       "
       >
@@ -45,6 +55,7 @@ const Header = () => {
     transition
     absolute
     desktop:hidden
+ 
     "
           onClick={toggleMobileMenu}
         >
