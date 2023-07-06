@@ -30,6 +30,8 @@ export default function Home() {
     <>
       <div
         className="
+    small:mt-5
+    small:h-16
     tablet:mt-5
     tablet:h-16   
     md:mt-5
@@ -49,6 +51,7 @@ export default function Home() {
 
       <div
         className="
+    small:px-4
     tablet:block
     laptop:flex
     laptop:justify-evenly
@@ -64,6 +67,8 @@ export default function Home() {
       >
         <div
           className="
+        small:flex
+        small:justify-center
         tablet:w-full
         tablet:flex
         tablet:justify-center
@@ -81,6 +86,9 @@ export default function Home() {
         </div>
         <div
           className="
+        small:mt-5
+        small:flex
+        small:justify-center
         tablet:flex
         tablet:justify-center
         tablet:w-full
@@ -101,13 +109,14 @@ export default function Home() {
         "
         >
           <Image
-            src="/logo.png"
+            src="/avataaars.png"
             alt="logo"
-            width={450}
+            width={350}
             height={30}
             className="
             rounded 
             shadow-lg
+            small:w-60
             laptop:w-96
             desktop:h-96
             "
@@ -122,6 +131,7 @@ export default function Home() {
           justify-center
           text-5xl
           tablet:mt-10
+          small:mt-10
           md:mt-10
           "
       >
@@ -170,14 +180,14 @@ export default function Home() {
       <div
         className={
           light
-            ? " min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-black text-white tablet:grid tablet:grid-cols-1"
-            : "min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-white text-black tablet:grid tablet:grid-cols-1"
+            ? " min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-black text-white tablet:grid tablet:grid-cols-1 small:grid small:grid-cols-1"
+            : "min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-white text-black tablet:grid tablet:grid-cols-1 small:grid small:grid-cols-1"
         }
       >
-        <div className="flex justify-center tablet:justify-center tablet:px-3 tablet:mt-4">
+        <div className="flex justify-center tablet:justify-center tablet:px-3 tablet:mt-4 small:mt-3">
           <Copyright />
         </div>
-        <div className="flex justify-center tablet:justify-center tablet:px-3 tablet:mt-4">
+        <div className="flex justify-center tablet:justify-center tablet:px-3 tablet:mt-4 small:mt-3">
           <PersonalInformation />
         </div>
       </div>

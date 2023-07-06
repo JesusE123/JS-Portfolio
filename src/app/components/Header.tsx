@@ -19,19 +19,29 @@ const Header = () => {
     <div
       className={
         background
-          ? "laptop:flex laptop:justify-between laptop:fixed laptop:w-full desktop:fixed desktop:items-center desktop:inset-x-0 desktop:flex desktop:justify-between  md:flex md:justify-between md:fixed md:w-full tablet:flex tablet:justify-between tablet:w-full tablet:fixed "
-          : "laptop:flex laptop:justify-between laptop:fixed laptop:w-full desktop:fixed desktop:items-center desktop:inset-x-0 desktop:flex desktop:justify-between  md:flex md:justify-between md:fixed md:w-full tablet:flex tablet:justify-between tablet:w-full tablet:fixed "
+          ? "small:flex small:justify-between small:fixed small:w-full laptop:flex laptop:justify-between laptop:fixed laptop:w-full desktop:fixed desktop:items-center desktop:inset-x-0 desktop:flex desktop:justify-between  md:flex md:justify-between md:fixed md:w-full tablet:flex tablet:justify-between tablet:w-full tablet:fixed "
+          : "small:flex small:justify-between small:fixed small:w-full laptop:flex laptop:justify-between laptop:fixed laptop:w-full desktop:fixed desktop:items-center desktop:inset-x-0 desktop:flex desktop:justify-between  md:flex md:justify-between md:fixed md:w-full tablet:flex tablet:justify-between tablet:w-full tablet:fixed "
       }
     >
       <div className="">
         <h1 className="text-bold text-5xl ml-5">JS</h1>
       </div>
-      <div className="tablet:hidden md:hidden laptop:hidden">
+      <div
+        className="
+      small:hidden 
+      tablet:hidden 
+      md:hidden 
+      laptop:hidden"
+      >
         <Menu />
       </div>
 
       <div
         className="
+        small:w-full
+        small:justify-end
+        small:items-center
+        small:flex
         tablet:w-full
         tablet:justify-end
         tablet:items-center
@@ -84,7 +94,7 @@ const Header = () => {
           <ThemeSwitcher />
         </div>
 
-        <div className="tablet:hidden md:hidden laptop:hidden">
+        <div className="small:hidden tablet:hidden md:hidden laptop:hidden">
           <DowloadCv />
         </div>
       </div>

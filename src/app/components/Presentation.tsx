@@ -11,6 +11,10 @@ const Presentation = () => {
     <div
       id="presentation"
       className="
+    small:w-full
+    small:flex
+    small:flex-col
+    small:justify-center
     tablet:w-full 
     tablet:mt-6
     md:mt-6
@@ -29,6 +33,10 @@ const Presentation = () => {
     >
       <div
         className="
+      small:justify-center
+      small:flex
+      small:flex-row
+      small:space-x-2
       tablet:flex
       tablet:justify-center
       tablet:space-x-2
@@ -46,14 +54,15 @@ const Presentation = () => {
         <h1
           className={
             light
-              ? "laptop:text-7xl  text-blue-950 tablet:text-5xl md:text-6xl desktop:text-7xl"
-              : "laptop:text-7xl  text-[#88ffcc] tablet:text-5xl md:text-6xl desktop:text-7xl"
+              ? "small:text-4xl laptop:text-7xl  text-blue-950 tablet:text-5xl md:text-6xl desktop:text-7xl"
+              : "small:text-4xl laptop:text-7xl  text-[#88ffcc] tablet:text-5xl md:text-6xl desktop:text-7xl"
           }
         >
           JESÚS
         </h1>
         <h1
           className="
+          small:text-4xl
           tablet:text-5xl 
           md:text-6xl
           laptop:text-6xl
@@ -66,6 +75,8 @@ const Presentation = () => {
       </div>
       <div
         className="
+          small:flex
+          small:justify-center
           tablet:flex
           tablet:justify-center
           md:flex
@@ -83,6 +94,7 @@ const Presentation = () => {
        text-4xl
        mb-5
        opacity-100
+       small:text-2xl
        tablet:text-2xl
 
       "
@@ -104,6 +116,8 @@ const Presentation = () => {
       >
         <div
           className="
+      small:ml-4
+      small:px-32
       tablet:w-2/3
       md:w-2/3
       laptop:w-3/4
@@ -115,9 +129,6 @@ const Presentation = () => {
         >
           <p
             className="
-      
-       flex
-        
       "
           >
             Soy un desarrollador web apasionado por la tecnologia, por la
@@ -131,6 +142,8 @@ const Presentation = () => {
 
       <div
         className="
+      small:flex
+      small:justify-center
       tablet:flex
       tablet:justify-center
       md:flex

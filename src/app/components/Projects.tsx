@@ -5,7 +5,7 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      name: "FakeStore",
+      name: "Fake Store",
       path: "https://github.com/JesusE123/FakeStore",
       img: "./fakestore.png",
       description:
@@ -13,7 +13,7 @@ const Projects = () => {
     },
     {
       id: 2,
-      name: "Rick and Morty",
+      name: "Rick & Morty",
       path: "https://github.com/JesusE123/Rick-and-Morty",
       img: "./rickandmorty.png",
       description:

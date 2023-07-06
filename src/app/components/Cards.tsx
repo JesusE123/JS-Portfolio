@@ -16,8 +16,11 @@ interface cardProps {
 
 const Cards: React.FC<cardProps> = ({ name, path, image, description }) => {
   return (
-    <div id="Proyectos" className="laptop:px-2">
-      <Card sx={{ maxWidth: 345 }} className="tablet:w-28 tablet:h-full">
+    <div
+      id="Proyectos"
+      className="laptop:px-2 small:flex-shrink-0 small:w-48 tablet:flex-shrink-0 tablet:w-48 md:flex-shrink-0 md:w-48"
+    >
+      <Card sx={{ maxWidth: 345 }} className="">
         <CardMedia sx={{ height: 140 }} image={image} title="logo image" />
         <CardContent>
           <Typography
@@ -30,7 +33,7 @@ const Cards: React.FC<cardProps> = ({ name, path, image, description }) => {
           <Typography
             variant="body2"
             color="text.secondary"
-            className="tablet:truncate"
+            className="tablet:flex"
           >
             {description}
           </Typography>
