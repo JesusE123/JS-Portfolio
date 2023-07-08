@@ -12,9 +12,21 @@ import { useTheme } from "next-themes";
 
 import { BsArrowDownShort } from "react-icons/bs";
 import { PersonalInformation } from "./components/PersonalInformation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export default function Home() {
+  const presentationRef = useRef<HTMLInputElement>(null);
+  const skillsRef = useRef<HTMLInputElement>(null);
+  const proyectsRef = useRef<HTMLInputElement>(null);
+  const contactRef = useRef<HTMLInputElement>(null);
+
+  const handleClick = (ref) => {
+    window.scrollTo({
+      top: ref.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
   const light = theme === "light";
@@ -54,9 +66,10 @@ export default function Home() {
     desktop:h-16
     desktop:mt-5
     snap-start
+
     "
         >
-          <Header />
+          <Header handleClick={handleClick} />
         </section>
 
         <section
@@ -92,7 +105,7 @@ export default function Home() {
         
         "
           >
-            <Presentation />
+            <Presentation ref={presentationRef} />
           </div>
           <div
             className="
@@ -161,7 +174,7 @@ export default function Home() {
         snap-start
         "
         >
-          <Skills />
+          <Skills ref={skillsRef} />
         </section>
 
         <section
@@ -176,7 +189,7 @@ export default function Home() {
         snap-start
         "
         >
-          <Projects />
+          <Projects ref={proyectsRef} />
         </section>
 
         <section
@@ -186,7 +199,7 @@ export default function Home() {
         snap-start
         "
         >
-          <Contact />
+          <Contact ref={contactRef} />
         </section>
 
         <section

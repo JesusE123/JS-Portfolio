@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
 import { AiFillHtml5 } from "react-icons/ai";
 import { IoLogoCss3 } from "react-icons/io";
@@ -28,12 +28,12 @@ const skills = [
   { id: 10, icon: <SiJest /> },
 ];
 
-const Skills = () => {
+const Skills = ({}, ref) => {
   const { theme } = useTheme();
 
   const light = theme === "light";
   return (
-    <div id="skills">
+    <div id="Habilidades">
       <h1 className="text-3xl py-3">Habilidades Tecnicas</h1>
 
       <div
@@ -43,6 +43,7 @@ const Skills = () => {
       justify-center
       items-center
       "
+        ref={ref}
       >
         <ul
           className="
@@ -75,4 +76,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default forwardRef(Skills);

@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
-const Menu = () => {
+const Menu = ({ handleClick }) => {
+  const menu = [
+    { id: 1, title: "Sobre mi" },
+    { id: 2, title: "Habilidades" },
+    { id: 3, title: "Proyectos" },
+    { id: 4, title: "Contacto" },
+  ];
+
   return (
     <div
       className="
@@ -12,18 +19,16 @@ const Menu = () => {
     "
     >
       <ul className="flex flex-row space-x-8 items-center text-xl">
-        <li className="hover:bg-slate-500 rounded transition">
-          <Link href="/#presentation">Sobre mi</Link>
-        </li>
-        <li className="hover:bg-slate-500 rounded transition">
-          <Link href="/#skills">Habilidades</Link>
-        </li>
-        <li className="hover:bg-slate-500 rounded  transition">
-          <Link href="/#Proyectos">Proyectos</Link>
-        </li>
-        <li className="hover:bg-slate-500 rounded transition">
-          <Link href="/#contact">Contacto</Link>
-        </li>
+        {menu.map((element, index) => (
+          <li
+            className="hover:bg-slate-500 cursor-pointer rounded px-2 py-1"
+            key={index}
+          >
+            <Link href="#" onClick={() => handleClick(element.title)}>
+              {element.title}
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   );

@@ -1,11 +1,11 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import Form from "./Form";
 
 import Image from "next/image";
 
-function Contact() {
+function Contact({}, ref) {
   return (
-    <div id="contact">
+    <div ref={ref}>
       <div className="text-center py-2">
         <h1 className="text-4xl py-4 font-bold">Contactame</h1>
       </div>
@@ -47,4 +47,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default forwardRef(Contact);

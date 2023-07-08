@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { forwardRef } from "react";
 import SocialContact from "./SocialContact";
 
 import { useTheme } from "next-themes";
 
-const Presentation = () => {
+const Presentation = ({}, ref) => {
   const { theme } = useTheme();
   const light = theme === "light";
 
   return (
     <div
-      id="presentation"
+      ref={ref}
+      id="Sobre mi"
       className="
     small:w-full
     small:flex
@@ -159,4 +160,4 @@ const Presentation = () => {
   );
 };
 
-export default Presentation;
+export default forwardRef(Presentation);

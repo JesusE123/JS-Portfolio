@@ -1,7 +1,7 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import Cards from "./Cards";
 
-const Projects = () => {
+const Projects = ({}, ref) => {
   const projects = [
     {
       id: 1,
@@ -41,6 +41,7 @@ const Projects = () => {
       max-sm:px-3
       max-sm:space-x-2
       "
+        ref={ref}
       >
         {projects.map((element, index) => (
           <Cards
@@ -56,4 +57,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default forwardRef(Projects);
