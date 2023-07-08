@@ -34,17 +34,23 @@ const Skills = () => {
   const light = theme === "light";
   return (
     <div id="skills">
-      <div></div>
       <h1 className="text-3xl py-3">Habilidades Tecnicas</h1>
 
-      <div>
+      <div
+        className="
+      h-full
+      flex
+      justify-center
+      items-center
+      "
+      >
         <ul
           className="
            grid 
            grid-cols-5 
            gap-8 
            mt-10
-           text-4xl
+           text-6xl
            content-center
            h-56
            max-sm:gap-2

@@ -38,7 +38,8 @@ function Contact() {
             alt="logo"
             width={200}
             height={30}
-            className="bg-transparent mt-4"
+            quality={100}
+            className="mt-4"
           />
         </div>
       </div>

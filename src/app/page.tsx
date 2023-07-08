@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import Header from "./components/Header";
 import Presentation from "./components/Presentation";
@@ -30,6 +31,16 @@ export default function Home() {
     <>
       <div
         className="
+    snap-y
+    snap-mandatory
+    overflow-auto 
+    scroll-smooth
+    h-screen
+    w-screen
+    "
+      >
+        <section
+          className="
     small:mt-5
     small:h-16
     tablet:mt-5
@@ -42,15 +53,14 @@ export default function Home() {
     desktop:items-center
     desktop:h-16
     desktop:mt-5
-    
-
+    snap-start
     "
-      >
-        <Header />
-      </div>
+        >
+          <Header />
+        </section>
 
-      <div
-        className="
+        <section
+          className="
     small:px-4
     tablet:block
     laptop:flex
@@ -60,13 +70,13 @@ export default function Home() {
     laptop:flex-row
     desktop:flex
     desktop:flex-row
-    desktop:min-h-[70vh]
-    
-
+    desktop:min-h-[100vh]
+    desktop:justify-stretch
+     snap-start
     "
-      >
-        <div
-          className="
+        >
+          <div
+            className="
         small:flex
         small:justify-center
         tablet:w-full
@@ -81,11 +91,11 @@ export default function Home() {
         desktop:justify-center
         
         "
-        >
-          <Presentation />
-        </div>
-        <div
-          className="
+          >
+            <Presentation />
+          </div>
+          <div
+            className="
         small:mt-5
         small:flex
         small:justify-center
@@ -107,25 +117,24 @@ export default function Home() {
        
         
         "
-        >
-          <Image
-            src="/avataaars.png"
-            alt="logo"
-            width={350}
-            height={30}
-            className="
+          >
+            <Image
+              src="/human.webp"
+              alt="logo"
+              width={500}
+              height={400}
+              quality={100}
+              className="
             rounded 
-            shadow-lg
             small:w-60
             laptop:w-96
-            desktop:h-96
             "
-          />
-        </div>
-      </div>
+            />
+          </div>
+        </section>
 
-      <div
-        className="
+        <div
+          className="
           text-center 
           flex 
           justify-center
@@ -134,62 +143,66 @@ export default function Home() {
           small:mt-10
           md:mt-10
           "
-      >
-        <BsArrowDownShort className="animate-bounce" />
-      </div>
+        >
+          <BsArrowDownShort className="animate-bounce" />
+        </div>
 
-      <div
-        className="
+        <section
+          className="
         flex 
         justify-center 
         text-center 
         items-center
         font-semibold
         mt-5
-        min-h-[70vh]
+        desktop:min-h-[100vh]
         md:min-h-[60vh]
         md:mt-10
+        snap-start
         "
-      >
-        <Skills />
-      </div>
+        >
+          <Skills />
+        </section>
 
-      <div
-        className="
+        <section
+          className="
         flex 
         justify-center 
         items-center
         font-semibold
         mt-2
-        min-h-[70vh]
+        desktop:min-h-[100vh]
         md-h-[60vh]
+        snap-start
         "
-      >
-        <Projects />
-      </div>
+        >
+          <Projects />
+        </section>
 
-      <div
-        className="
-        min-h-[70vh]
+        <section
+          className="
+        desktop:min-h-[100vh]
         mt-10
+        snap-start
         "
-      >
-        <Contact />
-      </div>
+        >
+          <Contact />
+        </section>
 
-      <div
-        className={
-          light
-            ? " min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-black text-white tablet:grid tablet:grid-cols-1 small:grid small:grid-cols-1"
-            : "min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-white text-black tablet:grid tablet:grid-cols-1 small:grid small:grid-cols-1"
-        }
-      >
-        <div className="flex justify-center tablet:justify-center tablet:px-3 tablet:mt-4 small:mt-3">
-          <Copyright />
-        </div>
-        <div className="flex justify-center tablet:justify-center tablet:px-3 tablet:mt-4 small:mt-3">
-          <PersonalInformation />
-        </div>
+        <section
+          className={
+            light
+              ? " snap-start min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-black text-white tablet:grid tablet:grid-cols-1 small:grid small:grid-cols-1"
+              : " snap-start min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-white text-black tablet:grid tablet:grid-cols-1 small:grid small:grid-cols-1"
+          }
+        >
+          <div className="flex justify-center tablet:justify-center tablet:px-3 tablet:mt-4 small:mt-3">
+            <Copyright />
+          </div>
+          <div className="flex justify-center tablet:justify-center tablet:px-3 tablet:mt-4 small:mt-3">
+            <PersonalInformation />
+          </div>
+        </section>
       </div>
     </>
   );

@@ -2,20 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
-html {
-    scroll-behavior: smooth;
-}
-
-[data-theme='light'] body {
-    color:black !important;
-    background-color: white !important;
-    transition-delay: 0,2s;
-    
+[data-theme="light"] body {
+  color: black !important;
+  background-color: white !important;
+  transition-delay: 0, 2s;
 }
 
 [data-theme="dark"] body {
-    background-color: black !important;
-    color: white !important;
-    transition-delay: 0,2s;
+  background-color: black !important;
+  color: white !important;
+  transition-delay: 0, 2s;
 }
