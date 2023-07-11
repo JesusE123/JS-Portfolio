@@ -28,7 +28,7 @@ const skills = [
   { id: 10, icon: <SiJest /> },
 ];
 
-const Skills = ({}, ref) => {
+const Skills = () => {
   const { theme } = useTheme();
 
   const light = theme === "light";
@@ -43,7 +43,6 @@ const Skills = ({}, ref) => {
       justify-center
       items-center
       "
-        ref={ref}
       >
         <ul
           className="

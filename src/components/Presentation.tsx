@@ -3,14 +3,13 @@ import SocialContact from "./SocialContact";
 
 import { useTheme } from "next-themes";
 
-const Presentation = ({}, ref) => {
+const Presentation = () => {
   const { theme } = useTheme();
   const light = theme === "light";
 
   return (
     <div
-      ref={ref}
-      id="Sobre mi"
+      id="SobreMi"
       className="
     small:w-full
     small:flex
@@ -160,4 +159,4 @@ const Presentation = ({}, ref) => {
   );
 };
 
-export default forwardRef(Presentation);
+export default Presentation;

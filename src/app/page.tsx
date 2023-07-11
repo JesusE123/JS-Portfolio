@@ -1,32 +1,21 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 import Image from "next/image";
-import Header from "./components/Header";
-import Presentation from "./components/Presentation";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Copyright from "./components/Copyright";
+import Header from "../components/Header";
+import Presentation from "../components/Presentation";
+import Skills from "../components/Skills";
+import Projects from "../components/Projects";
+import Contact from "../components/Contact";
+import Copyright from "../components/Copyright";
 
 import { useTheme } from "next-themes";
 
 import { BsArrowDownShort } from "react-icons/bs";
-import { PersonalInformation } from "./components/PersonalInformation";
-import { useEffect, useState, useRef } from "react";
+import { PersonalInformation } from "../components/PersonalInformation";
 
 export default function Home() {
-  const presentationRef = useRef<HTMLInputElement>(null);
-  const skillsRef = useRef<HTMLInputElement>(null);
-  const proyectsRef = useRef<HTMLInputElement>(null);
-  const contactRef = useRef<HTMLInputElement>(null);
-
-  const handleClick = (ref) => {
-    window.scrollTo({
-      top: ref.offsetTop,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
   const light = theme === "light";
@@ -69,10 +58,11 @@ export default function Home() {
 
     "
         >
-          <Header handleClick={handleClick} />
+          <Header />
         </section>
 
         <section
+          id="#SobreMi"
           className="
     small:px-4
     tablet:block
@@ -105,7 +95,7 @@ export default function Home() {
         
         "
           >
-            <Presentation ref={presentationRef} />
+            <Presentation />
           </div>
           <div
             className="
@@ -161,6 +151,7 @@ export default function Home() {
         </div>
 
         <section
+          id="#Habilidades"
           className="
         flex 
         justify-center 
@@ -174,10 +165,11 @@ export default function Home() {
         snap-start
         "
         >
-          <Skills ref={skillsRef} />
+          <Skills />
         </section>
 
         <section
+          id="#Proyectos"
           className="
         flex 
         justify-center 
@@ -189,17 +181,18 @@ export default function Home() {
         snap-start
         "
         >
-          <Projects ref={proyectsRef} />
+          <Projects />
         </section>
 
         <section
+          id="#Contacto"
           className="
         desktop:min-h-[100vh]
         mt-10
         snap-start
         "
         >
-          <Contact ref={contactRef} />
+          <Contact />
         </section>
 
         <section

@@ -10,7 +10,7 @@ import { useTheme } from "next-themes";
 import useHeader from "@/hooks/useHeader";
 import MobileMenu from "./MobileMenu";
 
-const Header = ({ handleClick }) => {
+const Header = () => {
   const { theme } = useTheme();
   const { background, showMobileMenu, toggleMobileMenu } = useHeader();
   const light = theme === "light";
@@ -33,7 +33,7 @@ const Header = ({ handleClick }) => {
       md:hidden 
       laptop:hidden"
       >
-        <Menu handleClick={handleClick} />
+        <Menu />
       </div>
 
       <div

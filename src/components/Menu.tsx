@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 
-const Menu = ({ handleClick }) => {
-  const menu = [
-    { id: 1, title: "Sobre mi" },
-    { id: 2, title: "Habilidades" },
-    { id: 3, title: "Proyectos" },
-    { id: 4, title: "Contacto" },
+const Menu = () => {
+  const menuItem = [
+    { id: 1, title: "Sobre mi", ref: "#SobreMi" },
+    { id: 2, title: "Habilidades", ref: "#Habilidades" },
+    { id: 3, title: "Proyectos", ref: "#Proyectos" },
+    { id: 4, title: "Contacto", ref: "#Contacto" },
   ];
 
   return (
@@ -19,14 +19,12 @@ const Menu = ({ handleClick }) => {
     "
     >
       <ul className="flex flex-row space-x-8 items-center text-xl">
-        {menu.map((element, index) => (
+        {menuItem.map((element, index) => (
           <li
             className="hover:bg-slate-500 cursor-pointer rounded px-2 py-1"
             key={index}
           >
-            <Link href="#" onClick={() => handleClick(element.title)}>
-              {element.title}
-            </Link>
+            <a href={element.ref}>{element.title}</a>
           </li>
         ))}
       </ul>

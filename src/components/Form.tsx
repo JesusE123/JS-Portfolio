@@ -1,14 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Formik } from "formik";
 import { useTheme } from "next-themes";
 
 import useForm from "@/hooks/useForm";
-
-interface FormValues {
-  email: string;
-  password: string;
-  message: string;
-}
 
 const Form = () => {
   const { handleData, SignupSchema, mensaje, setMensaje } = useForm();
@@ -81,15 +75,17 @@ const Form = () => {
                 name="subject"
                 type="text"
                 className="
-            border-x-2
-            border-b-2
-            border-gray-500
+                border-dashed
+                border-2
+                border-[#88ffcc]
             shadow-lg
             rounded-lg
             px-2
             py-2
             w-full
-
+            bg-transparent
+            focus:outline-none
+            placeholder:text-white
             "
                 placeholder="Asunto"
               />
@@ -105,14 +101,18 @@ const Form = () => {
                 name="email"
                 type="email"
                 className="
-            border-x-2
-            border-b-2
-           border-gray-500
+              border-dashed
+              border-2
+           border-[#88ffcc]
             shadow.lg
             rounded-lg
             px-2
             py-2
             w-full
+            bg-transparent
+            focus:outline-none
+            placeholder:text-white
+          
         "
                 placeholder="Email"
               />
@@ -127,7 +127,19 @@ const Form = () => {
                 onChange={handleChange}
                 name="message"
                 placeholder="Mensaje"
-                className=" border-x border-b-2 rounded border border-gray-500 shadow-lg  w-full px-2"
+                className="
+                border-dashed
+                border-2
+                border-[#88ffcc] 
+                rounded 
+                shadow-lg  
+                w-full 
+                px-2 
+                bg-transparent 
+                placeholder:pt-2 
+              placeholder:text-white
+                focus:outline-none
+              "
               ></textarea>
               {errors.message && touched.message ? (
                 <span>{errors.message}</span>
@@ -139,8 +151,8 @@ const Form = () => {
               disabled={isSubmitting}
               className={
                 light
-                  ? "border border-blue-950  bg-transparent  cursor-pointer transition hover:opacity-50  w-full  rounded  py-4 font-semibold mt-3"
-                  : "border border-[#88ffcc]  bg-transparent  cursor-pointer transition hover:opacity-50  w-full  rounded  py-4 font-semibold mt-3"
+                  ? "border-dashed border-2 border-blue-950  bg-transparent  cursor-pointer transition hover:opacity-50  w-full  rounded  py-4 font-semibold mt-3"
+                  : "border-dashed border-2 border-[#88ffcc]  bg-transparent  cursor-pointer transition hover:opacity-50  w-full  rounded  py-4 font-semibold mt-3"
               }
             >
               Enviar

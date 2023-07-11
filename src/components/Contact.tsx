@@ -3,9 +3,9 @@ import Form from "./Form";
 
 import Image from "next/image";
 
-function Contact({}, ref) {
+function Contact() {
   return (
-    <div ref={ref}>
+    <div id="Contacto">
       <div className="text-center py-2">
         <h1 className="text-4xl py-4 font-bold">Contactame</h1>
       </div>
