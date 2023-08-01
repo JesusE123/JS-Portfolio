@@ -1,34 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 const Menu = () => {
   const menuItem = [
-    { id: 1, title: "Sobre mi", ref: "#SobreMi" },
-    { id: 2, title: "Habilidades", ref: "#Habilidades" },
-    { id: 3, title: "Proyectos", ref: "#Proyectos" },
-    { id: 4, title: "Contacto", ref: "#Contacto" },
+    { id: 1, title: "Sobre mi", ref: "sobreMi" },
+    { id: 2, title: "Habilidades", ref: "habilidades" },
+    { id: 3, title: "Proyectos", ref: "proyectos" },
+    { id: 4, title: "Contacto", ref: "contacto" },
   ];
 
   return (
-    <div
-      className="
-    desktop:h-16
-    desktop:flex
-    desktop:items-center
-
-    "
-    >
-      <ul className="flex flex-row space-x-8 items-center text-xl">
-        {menuItem.map((element, index) => (
-          <li
-            className="hover:bg-slate-500 cursor-pointer rounded px-2 py-1"
-            key={index}
+    <ul className="lg:flex flex-row space-x-8 items-center text-xl  md:hidden sm:hidden">
+      {menuItem.map((element, index) => (
+        <li className="cursor-pointer rounded px-2 py-1" key={index}>
+          <Link
+            className="transition duration-500 py-1"
+            href={`#${element.ref}`}
+            data-to-scrollspy-id={element.ref}
           >
-            <a href={element.ref}>{element.title}</a>
-          </li>
-        ))}
-      </ul>
-    </div>
+            {element.title}
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 };
 

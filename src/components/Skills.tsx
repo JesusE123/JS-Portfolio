@@ -33,12 +33,10 @@ const Skills = () => {
 
   const light = theme === "light";
   return (
-    <div id="Habilidades">
-      <h1 className="text-3xl py-3">Habilidades Tecnicas</h1>
-
+    <div className="flex items-center justify-center flex-col">
+      <h1 className="text-3xl py-3 text-center">Habilidades Tecnicas</h1>
       <div
         className="
-      h-full
       flex
       justify-center
       items-center
@@ -53,8 +51,7 @@ const Skills = () => {
            text-6xl
            content-center
            h-56
-           max-sm:gap-2
-           max-sm:px-2
+           md:text-5xl
            "
         >
           {skills.map((icon, index) => (
@@ -62,7 +59,7 @@ const Skills = () => {
               key={index}
               className={
                 light
-                  ? "border border-blue-950 rounded py-2 px-2 "
+                  ? "border border-[#0456A9] rounded py-2 px-2 "
                   : "border border-[#88ffcc] rounded py-2 px-2"
               }
             >

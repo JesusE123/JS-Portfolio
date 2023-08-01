@@ -5,41 +5,19 @@ import Image from "next/image";
 
 function Contact() {
   return (
-    <div id="Contacto">
-      <div className="text-center py-2">
-        <h1 className="text-4xl py-4 font-bold">Contactame</h1>
-      </div>
+    <div className="flex flex-col justify-center items-center w-full">
+      <h1 className="text-4xl font-bold text-center">Contactame</h1>
 
-      <div
-        className="
-    grid 
-    grid-cols-2 
-    grid-rows-1 
-    gap-x-8
-    items-center
-    text-center
-    "
-      >
-        <div className="">
-          <Form />
-        </div>
+      <div className="flex flex-row items-center w-full justify-evenly">
+        <Form />
 
-        <div
-          className="
-      flex 
-      items-center 
-      justify-center
-      max-sm:mr-2
-      max-sm:mt-2
-      "
-        >
+        <div className="mt-5 w-[360px] flex justify-center">
           <Image
             src="/developer.webp"
             alt="logo"
             width={200}
             height={30}
             quality={100}
-            className="mt-4"
           />
         </div>
       </div>

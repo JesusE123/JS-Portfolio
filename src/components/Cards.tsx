@@ -1,54 +1,58 @@
 import React from "react";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
+import CardContainer from "./CardContainer";
+import { CarouselDefault } from "./Carousel";
 
-import Typography from "@mui/material/Typography";
-import Link from "next/link";
-
-interface cardProps {
-  name: string;
-  path: string;
-  image: any;
-  description: string;
-}
-
-const Cards: React.FC<cardProps> = ({ name, path, image, description }) => {
+export const Cards = () => {
+  const projects = [
+    {
+      id: 1,
+      name: "Fake Store",
+      path: "https://github.com/JesusE123/FakeStore",
+      img: "./fakestore.png",
+      description:
+        "Uso de api para simular una tienda online y poder crear un carrito de compras, haciendo uso de metodos HTTP",
+    },
+    {
+      id: 2,
+      name: "Rick & Morty",
+      path: "https://github.com/JesusE123/Rick-and-Morty",
+      img: "./rickandmorty.png",
+      description:
+        "Uso de la api rick and morty, podremos buscar los personajes de la serie. Filtrarlos por nombre y specie",
+    },
+    {
+      id: 3,
+      name: "Todo App",
+      path: "https://github.com/JesusE123/Article-APP",
+      img: "./todo.png",
+      description:
+        "Proyecto famoso para practicar conocimientos, podremos adaptarlo a nuestros gustos y necesidades",
+    },
+  ];
   return (
-    <div
-      id="Proyectos"
-      className="laptop:px-2 small:flex-shrink-0 small:w-48 tablet:flex-shrink-0 tablet:w-48 md:flex-shrink-0 md:w-48"
-    >
-      <Card sx={{ maxWidth: 345 }} className="">
-        <CardMedia sx={{ height: 140 }} image={image} title="logo image" />
-        <CardContent>
-          <Typography
-            variant="h6"
-            component="div"
-            className="tablet:text-sm tablet:flex"
-          >
-            {name}
-          </Typography>
-          <Typography
-            variant="body2"
-            color="text.secondary"
-            className="tablet:flex"
-          >
-            {description}
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Link
-            href={`${path}`}
-            className="mx-4 hover:opacity-40 cursor-pointer transition duration-700 ease-in-out "
-          >
-            Ver proyecto
-          </Link>
-        </CardActions>
-      </Card>
+    <div>
+      <div
+        className="
+      mt-10
+      xl:flex 
+      flex-row 
+      space-x-8 
+      items-center
+      md:hidden
+      "
+      >
+        {projects.map((element, index) => (
+          <CardContainer
+            key={index}
+            name={element.name}
+            path={element.path}
+            image={element.img}
+            description={element.description}
+          />
+        ))}
+      </div>
+
+      <CarouselDefault data={projects} />
     </div>
   );
 };
-
-export default Cards;

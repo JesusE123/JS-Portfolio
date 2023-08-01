@@ -10,7 +10,7 @@ const useHeader = () => {
 
   useEffect(() => {
     const handleBackground = () => {
-      if (window.scrollY >= 90) {
+      if (window.scrollY >= 1) {
         setBackground(true);
       } else {
         setBackground(false);

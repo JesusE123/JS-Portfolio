@@ -4,101 +4,35 @@ import React from "react";
 
 import Menu from "./Menu";
 import DowloadCv from "./DowloadCv";
-import ThemeSwitcher from "./ThemeSwitcher";
-import { AiOutlineMenu } from "react-icons/ai";
-import { useTheme } from "next-themes";
-import useHeader from "@/hooks/useHeader";
 import MobileMenu from "./MobileMenu";
 
+import { AiOutlineMenu } from "react-icons/ai";
+
+import useHeader from "@/hooks/useHeader";
+
 const Header = () => {
-  const { theme } = useTheme();
   const { background, showMobileMenu, toggleMobileMenu } = useHeader();
-  const light = theme === "light";
 
   return (
-    <div
+    <nav
       className={
         background
-          ? "small:flex small:justify-between small:fixed small:w-full laptop:flex laptop:justify-between laptop:fixed laptop:w-full desktop:fixed desktop:items-center desktop:inset-x-0 desktop:flex desktop:justify-between  md:flex md:justify-between md:fixed md:w-full tablet:flex tablet:justify-between tablet:w-full tablet:fixed "
-          : "small:flex small:justify-between small:fixed small:w-full laptop:flex laptop:justify-between laptop:fixed laptop:w-full desktop:fixed desktop:items-center desktop:inset-x-0 desktop:flex desktop:justify-between  md:flex md:justify-between md:fixed md:w-full tablet:flex tablet:justify-between tablet:w-full tablet:fixed "
+          ? "bg-gray-400/50 fixed w-full md:bg-gray-400/50"
+          : "fixed w-full"
       }
     >
-      <div className="">
-        <h1 className="text-bold text-5xl ml-5">JS</h1>
-      </div>
-      <div
-        className="
-      small:hidden 
-      tablet:hidden 
-      md:hidden 
-      laptop:hidden"
-      >
+      <div className="flex items-center justify-between h-20">
+        <h1 className="text-5xl ms-4">JS</h1>
         <Menu />
-      </div>
-
-      <div
-        className="
-        small:w-full
-        small:justify-end
-        small:items-center
-        small:flex
-        tablet:w-full
-        tablet:justify-end
-        tablet:items-center
-        tablet:flex
-        desktop:hidden
-        md:flex
-        md:w-full
-        md:justify-end
-        md:items-center
-        laptop:flex
-        laptop:w-full
-        laptop:justify-end
-        laptop:items-center
-        
-       
-      "
-      >
-        <div
-          className=" 
-    cursor-pointer
-    transition
-    absolute
-    desktop:hidden
- 
-    "
-          onClick={toggleMobileMenu}
-        >
-          <AiOutlineMenu
-            size={30}
-            className={
-              light
-                ? "text-blue-950 hover:opacity-40 transition"
-                : "text-[#88ffcc] hover:opacity-40 transition"
-            }
-          />
-          <MobileMenu visible={showMobileMenu} />
+        <DowloadCv />
+        <div className="flex justify-end lg:hidden items-center">
+          <div className="cursor-pointer transition absolute right-10">
+            <AiOutlineMenu size={30} onClick={toggleMobileMenu} />
+            <MobileMenu visible={showMobileMenu} />
+          </div>
         </div>
       </div>
-      <div
-        className="
-        mr-10 
-        flex
-        flex-row
-        items-center
-        gap-2
-        desktop:w-auto
-        "
-      >
-        <div>
-          <ThemeSwitcher />
-        </div>
-
-        <div className="small:hidden tablet:hidden md:hidden laptop:hidden">
-          <DowloadCv />
-        </div>
-      </div>
-    </div>
+    </nav>
   );
 };
 
