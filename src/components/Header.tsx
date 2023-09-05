@@ -25,9 +25,13 @@ const Header = () => {
         <h1 className="text-5xl ms-4">JS</h1>
         <Menu />
         <DowloadCv />
-        <div className="flex justify-end lg:hidden items-center">
-          <div className="cursor-pointer transition absolute right-10">
-            <AiOutlineMenu size={30} onClick={toggleMobileMenu} />
+        <div className="flex justify-end xl:hidden items-center">
+          <div className="cursor-pointer transition absolute right-14">
+            <AiOutlineMenu
+              size={30}
+              onClick={toggleMobileMenu}
+              className="hover:opacity-30 transition-opacity"
+            />
             <MobileMenu visible={showMobileMenu} />
           </div>
         </div>

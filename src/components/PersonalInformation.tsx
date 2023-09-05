@@ -24,13 +24,13 @@ const data = [
 export const PersonalInformation = () => {
   return (
     <div className="">
-      <h3 className="text-3xl font-semibold">Informacion Personal</h3>
+      <h3 className="text-3xl font-semibold">Información Personal</h3>
 
       <div>
         <ul className="">
           {data.map((element, index) => (
             <div
-              className="flex flex-row items-center space-x-5 max-sm:space-x-0 max-sm:mr-4"
+              className="flex flex-row items-center space-x-5 sm:space-x-2 md:space-x-5"
               key={index}
             >
               <li key={index} className="text-3xl py-2 flex">

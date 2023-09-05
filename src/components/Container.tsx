@@ -9,7 +9,7 @@ const Container = ({ children, id }: ContainerProps) => {
   return (
     <div
       id={id}
-      className="h-[100vh] flex xl:justify-center items-center lg:w-full lg:justify-evenly md:w-full md:justify-evenly"
+      className="h-[100vh] flex xl:justify-center items-center lg:w-full lg:justify-evenly md:w-full md:justify-evenly sm:justify-center sm:flex-col md:flex-row"
     >
       {children}
     </div>

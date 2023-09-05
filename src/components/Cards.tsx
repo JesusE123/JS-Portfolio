@@ -39,6 +39,7 @@ export const Cards = () => {
       space-x-8 
       items-center
       md:hidden
+      sm:hidden
       "
       >
         {projects.map((element, index) => (

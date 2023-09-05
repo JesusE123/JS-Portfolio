@@ -35,11 +35,11 @@ export default function Home() {
         <Container id="sobreMi">
           <Presentation />
 
-          <div className="flex items-center justify-center w-[40%]">
+          <div className="flex items-center justify-center w-[40%] sm:mt-10 md:m-0">
             <Image
               src="/human.webp"
-              alt="logo"
-              width={500}
+              alt="human"
+              width={450}
               height={400}
               quality={100}
             />
@@ -62,14 +62,14 @@ export default function Home() {
       <div
         className={
           light
-            ? "  snap-start min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-black text-white tablet:grid tablet:grid-cols-1 small:grid small:grid-cols-1"
-            : " snap-start min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-white text-black tablet:grid tablet:grid-cols-1 small:grid small:grid-cols-1"
+            ? "  snap-start min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-black text-white"
+            : " snap-start min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-white text-black"
         }
       >
-        <div className="flex justify-center tablet:justify-center tablet:px-3 tablet:mt-4 small:mt-3">
+        <div className="flex justify-center">
           <Copyright />
         </div>
-        <div className="flex justify-center tablet:justify-center tablet:px-3 tablet:mt-4 small:mt-3">
+        <div className="flex justify-center ">
           <PersonalInformation />
         </div>
       </div>

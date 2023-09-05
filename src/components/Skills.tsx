@@ -34,7 +34,7 @@ const Skills = () => {
   const light = theme === "light";
   return (
     <div className="flex items-center justify-center flex-col">
-      <h1 className="text-3xl py-3 text-center">Habilidades Tecnicas</h1>
+      <h1 className="text-3xl py-3 text-center">HABILIDADES TECNICAS</h1>
       <div
         className="
       flex
@@ -52,6 +52,8 @@ const Skills = () => {
            content-center
            h-56
            md:text-5xl
+           sm:text-5xl
+           sm:gap-4
            "
         >
           {skills.map((icon, index) => (
