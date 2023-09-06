@@ -1,10 +1,10 @@
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth !important;
-}
+
 
 [data-theme="light"] body {
   color: black !important;
@@ -23,6 +23,7 @@ html {
   border-radius: 10px;
   padding: 10px;
   transition-delay: 0, 2s;
+
 }
 
 [data-theme="light"] .active-scroll-spy {
@@ -30,4 +31,5 @@ html {
   border-radius: 10px;
   padding: 10px;
   transition-delay: 0, 2s;
+ 
 }

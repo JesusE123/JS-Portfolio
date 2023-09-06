@@ -21,10 +21,10 @@ const Presentation = () => {
 
         <p className=" text-center sm:text-center md:text-left">
           Soy un desarrollador web apasionado por la tecnologia, por la
-          innovacion y por todo lo que nos tiene el futuro en el mundo IT. Me
-          encuentro en busqueda de mi primer desafio como desarrollador web y
-          asi poder seguir ampliando mi conocimiento y continuar con mi
-          aprendizaje.
+          innovacion y por todo lo que nos tiene el futuro en el mundo IT. 
+          Soy una persona disciplinada apta para cualquier desafio, 
+          siempre dispuesto a ayudar y aprender de los mas experimentados en este 
+          camino del desarrollo web
         </p>
         <SocialContact />
       </div>
