@@ -14,7 +14,6 @@ const MenuItem: React.FC<MenuItemProps> = ({ label, href }) => {
     hover:opacity-50
     transition
     cursor-pointer
-    
     "
     >
       <Link href={href}>{label}</Link>

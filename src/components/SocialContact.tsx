@@ -20,7 +20,7 @@ const SocialContact = () => {
         text-4xl
         sm:justify-center
         md:justify-start
-        
+        justify-center
         "
       >
         {paths.map((element, index) => (

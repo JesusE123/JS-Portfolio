@@ -10,11 +10,11 @@ const DowloadCv = () => {
   const router = useRouter();
 
   const handleDownload = () => {
-    router.push("/CVJS.pdf");
+    router.push("/JesusCV.pdf");
   };
 
   return (
-    <div className="xl:flex items-center mr-4 sm:hidden md:hidden">
+    <div className=" hidden xl:flex items-center mr-4 sm:hidden md:hidden">
       <button
         onClick={handleDownload}
         className={

@@ -33,6 +33,7 @@ export const Cards = () => {
     <div>
       <div
         className="
+      hidden
       mt-10
       xl:flex 
       flex-row 

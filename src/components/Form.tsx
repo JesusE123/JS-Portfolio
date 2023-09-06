@@ -24,7 +24,7 @@ const Form = () => {
   }, [mensaje]);
 
   return (
-    <div className="flex justify-start items-start flex-col lg:w-1/3 sm:w-[350px] md:w-[360px] md:mt-10 sm:mt-10 sm:items-center md:items-center">
+    <div className="flex justify-center items-center flex-col lg:w-1/3 sm:w-[350px] md:w-[360px] md:mt-10 sm:mt-10 sm:items-center md:items-center">
       <h3 className="text-2xl pb-5">Enviame un mensaje</h3>
 
       <Formik

@@ -11,7 +11,7 @@ function Contact() {
       <div className="flex flex-row items-center w-full justify-evenly md:justify-center sm:justify-center">
         <Form />
 
-        <div className="mt-11 w-[40%] lg:flex justify-center md:hidden sm:hidden">
+        <div className="mt-11 w-[40%] lg:flex justify-center md:hidden sm:hidden hidden">
           <Image
             src="/developer.webp"
             alt="human"

@@ -10,7 +10,7 @@ const Menu = () => {
   ];
 
   return (
-    <ul className="xl:flex flex-row space-x-8 items-center text-xl  md:hidden sm:hidden">
+    <ul className=" hidden xl:flex flex-row space-x-8 items-center text-xl  md:hidden sm:hidden">
       {menuItem.map((element, index) => (
         <li className="cursor-pointer rounded px-2 py-1" key={index}>
           <Link

@@ -8,6 +8,9 @@ import { Oxanium } from "next/font/google";
 const gruppo = Oxanium({ weight: "400", subsets: ["latin-ext"] });
 
 export const metadata = {
+  icons: {
+    icon: "/js.jpg",
+  },
   title: "JS Portfolio",
   description: "Portfolio personal",
 };

@@ -62,8 +62,8 @@ export default function Home() {
       <div
         className={
           light
-            ? "  snap-start min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-black text-white"
-            : " snap-start min-h-[30vh] grid grid-cols-2 grid-rows-1  gap-x-8 items-center bg-white text-black"
+            ? "flex flex-col items-start snap-start min-h-[30vh] sm:grid grid-cols-2 grid-rows-1  gap-x-8 sm:items-center bg-black text-white"
+            : "flex flex-col items-start snap-start min-h-[30vh] sm:grid grid-cols-2 grid-rows-1  gap-x-8 sm:items-center bg-white text-black"
         }
       >
         <div className="flex justify-center">

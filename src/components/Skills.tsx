@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React from "react";
 
 import { AiFillHtml5 } from "react-icons/ai";
 import { IoLogoCss3 } from "react-icons/io";
@@ -48,7 +48,7 @@ const Skills = () => {
            grid-cols-5 
            gap-8 
            mt-10
-           text-6xl
+           text-3xl
            content-center
            h-56
            md:text-5xl
@@ -74,4 +74,4 @@ const Skills = () => {
   );
 };
 
-export default forwardRef(Skills);
+export default Skills;

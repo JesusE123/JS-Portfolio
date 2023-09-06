@@ -31,7 +31,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ visible }) => {
         <MenuItem label="Habilidades" href="/#habilidades" />
         <MenuItem label="Proyectos" href="/#proyectos" />
         <MenuItem label="Contacto" href="/#contacto" />
-        <MenuItem label="Descargar CV" href="/CVJS.pdf" />
+        <MenuItem label="Descargar CV" href="/JesusCV.pdf" />
       </div>
     </div>
   );
