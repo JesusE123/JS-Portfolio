@@ -14,6 +14,7 @@ import Copyright from "../components/Copyright";
 import { PersonalInformation } from "../components/PersonalInformation";
 import Container from "@/components/Container";
 import { useTheme } from "next-themes";
+import { AiOutlineArrowDown } from "react-icons/ai";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -34,6 +35,8 @@ export default function Home() {
       <ScrollSpy scrollThrottle={100} useBoxMethod={false}>
         <Container id="sobreMi">
           <Presentation />
+
+          <AiOutlineArrowDown className="animate-bounce text-3xl absolute mt-96" />
 
           <div className="flex items-center justify-center w-[40%] sm:mt-10 md:m-0">
             <Image
