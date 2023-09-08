@@ -2,15 +2,13 @@
 
 import React from "react";
 import { useTheme } from "next-themes";
-import { useRouter } from "next/navigation";
 
 const DowloadCv = () => {
   const { theme } = useTheme();
   const light = theme === "light";
-  const router = useRouter();
 
   const handleDownload = () => {
-    router.push("/JesusCV.pdf");
+    window.open("/JesusCV.pdf", "_blank");
   };
 
   return (
