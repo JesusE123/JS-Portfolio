@@ -1,19 +1,17 @@
 import React from "react";
 import MenuItem from "./MenuItem";
-import { useRouter } from "next/navigation";
 
 interface MobileMenuProps {
   visible?: boolean;
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ visible }) => {
-  const router = useRouter();
   if (!visible) {
     return null;
   }
 
   const handleDownload = () => {
-    router.push("/CVJS.pdf");
+    window.open("/JesusCV.pdf", "_blank");
   };
 
   return (
@@ -31,7 +29,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ visible }) => {
         <MenuItem label="Habilidades" href="/#habilidades" />
         <MenuItem label="Proyectos" href="/#proyectos" />
         <MenuItem label="Contacto" href="/#contacto" />
-        <MenuItem label="Descargar CV" href="/JesusCV.pdf" />
+        <MenuItem label="Descargar CV" Onclick={handleDownload} href="" />
       </div>
     </div>
   );
