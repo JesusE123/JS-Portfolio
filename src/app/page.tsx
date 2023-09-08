@@ -36,7 +36,7 @@ export default function Home() {
         <Container id="sobreMi">
           <Presentation />
 
-          <AiOutlineArrowDown className="animate-bounce text-3xl absolute mt-96" />
+          <AiOutlineArrowDown className=" hidden animate-bounce text-3xl absolute mt-96 md:hidden sm:hidden xl:block" />
 
           <div className="flex items-center justify-center w-[40%] sm:mt-10 md:m-0">
             <Image
