@@ -21,7 +21,7 @@ const Header = () => {
           : "fixed w-full"
       }
     >
-      <div className="flex items-center justify-between h-20">
+      <div className="flex items-center sm:items-center justify-between h-20">
         <h1 className="text-5xl ms-4">JS</h1>
         <Menu />
         <DowloadCv />
