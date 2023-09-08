@@ -15,7 +15,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ visible }) => {
   };
 
   return (
-    <div className="h-[250px] fixed right-3 ">
+    <div className="h-[250px]  fixed right-3">
       <div
         className="
       h-0
@@ -23,6 +23,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ visible }) => {
       flex-col
       space-y-3
       mt-8
+      
       "
       >
         <MenuItem label="Sobre mi" href="/#sobreMi" />

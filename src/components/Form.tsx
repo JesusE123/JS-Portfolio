@@ -119,7 +119,7 @@ const Form = () => {
             >
               Enviar
             </button>
-            {mensaje && <p className="bg-green-500 rounded mt-2">{mensaje}</p>}
+            {mensaje && <p className="bg-green-500 rounded mt-2 text-center">{mensaje}</p>}
           </form>
         )}
       </Formik>
