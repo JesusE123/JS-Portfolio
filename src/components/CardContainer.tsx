@@ -43,7 +43,9 @@ const CardContainer: React.FC<cardProps> = ({
         </CardContent>
         <CardActions>
           <Link
+          target="_blank"
             href={`${path}`}
+            
             className="mx-4 hover:opacity-40 cursor-pointer transition duration-700 ease-in-out "
           >
             Ver proyecto
