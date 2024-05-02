@@ -5,8 +5,9 @@ const Menu = () => {
   const menuItem = [
     { id: 1, title: "Sobre mi", ref: "sobreMi" },
     { id: 2, title: "Habilidades", ref: "habilidades" },
-    { id: 3, title: "Proyectos", ref: "proyectos" },
-    { id: 4, title: "Contacto", ref: "contacto" },
+    { id: 3, title: "Experiencia", ref: "experiencia" },
+    { id: 4, title: "Proyectos", ref: "proyectos" },
+    { id: 5, title: "Contacto", ref: "contacto" },
   ];
 
   return (

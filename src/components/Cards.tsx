@@ -1,24 +1,23 @@
 import React from "react";
 import CardContainer from "./CardContainer";
-import { CarouselDefault } from "./Carousel";
+import {  CarouselP } from "./Carousel";
 
 export const Cards = () => {
   const projects = [
     {
       id: 1,
-      name: "Fake Store",
-      path: "https://github.com/JesusE123/FakeStore",
-      img: "./fakestore.png",
-      description:
-        "Uso de api para simular una tienda online y poder crear un carrito de compras, haciendo uso de metodos HTTP",
-    },
+      name: "E-Commerce next js",
+      path: "https://fake-commerce-next.vercel.app/",
+      img: "./commerce.jpeg",
+      description:"E-commerce realizado, utilizando la API de Fakestore.com, permitiendo obtener productos, filtrarlos y simular un carrito de compras"
+},
     {
       id: 2,
       name: "Rick & Morty",
       path: "https://github.com/JesusE123/Rick-and-Morty",
       img: "./rickandmorty.png",
-      description:
-        "Uso de la api rick and morty, podremos buscar los personajes de la serie. Filtrarlos por nombre y specie",
+      description:"Uso de la api rick and morty, podremos buscar los personajes de la serie. Filtrarlos por nombre y specie"
+      
     },
     {
       id: 3,
@@ -26,23 +25,36 @@ export const Cards = () => {
       path: "https://github.com/JesusE123/Article-APP",
       img: "./todo.png",
       description:
-        "Proyecto famoso para practicar conocimientos, podremos adaptarlo a nuestros gustos y necesidades",
+      "Proyecto famoso para practicar conocimientos, podremos adaptarlo a nuestros gustos y necesidades"
+    },
+    {
+      id: 4,
+      name: "Mercado Calculator",
+      path: "https://mercado-calculator.vercel.app",
+      img: "./mercado-app.png",
+      description:
+      "Proyecto realizado con el fin personal de llevar un control al momento de realizar las compras en el super mercado, permitiendo dar el total de la compra y manipular los productos"
+    },
+    {
+      id: 5,
+      name: "Portfolio web",
+      path: "https://github.com/JesusE123/JS-Portfolio",
+      img: "./portfolio.png",
+      description:
+      "Portfolio personal realizado para mostrar los trabajos previamente echos junto a las experiencias laborales y todo mi camino como desarrollador"
+    },
+    {
+      id: 6,
+      name: "Coco Panaderia",
+      path: "https://github.com/LuisRon27/Panaderia_coco",
+      img: "./coco.jpeg",
+      description:
+      "Sistema realizado a cliente para su comercio, el mismo cuenta con panel de admin, control de pedidos y base de datos para el registro de sus empleados y cadetes"
     },
   ];
   return (
-    <div>
-      <div
-        className="
-      hidden
-      mt-10
-      xl:flex 
-      flex-row 
-      space-x-8 
-      items-center
-      md:hidden
-      sm:hidden
-      "
-      >
+    <div className="h-full w-full">
+      <div className="xl:grid grid-cols-3 gap-6 hidden">
         {projects.map((element, index) => (
           <CardContainer
             key={index}
@@ -54,7 +66,7 @@ export const Cards = () => {
         ))}
       </div>
 
-      <CarouselDefault data={projects} />
+      <CarouselP data={projects} />
     </div>
   );
 };

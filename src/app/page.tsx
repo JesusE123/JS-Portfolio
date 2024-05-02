@@ -15,6 +15,7 @@ import { PersonalInformation } from "../components/PersonalInformation";
 import Container from "@/components/Container";
 import { useTheme } from "next-themes";
 import { AiOutlineArrowDown } from "react-icons/ai";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -51,6 +52,10 @@ export default function Home() {
 
         <Container id="habilidades">
           <Skills />
+        </Container>
+
+        <Container id="experiencia">
+          <Experience />
         </Container>
 
         <Container id="proyectos">

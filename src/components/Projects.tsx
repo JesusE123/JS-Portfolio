@@ -4,11 +4,12 @@ import { Cards } from "./Cards";
 
 const Projects = () => {
   return (
-    <div className="flex flex-col justify-center items-center">
-      <h1 className="text-4xl text-center py-4">PROYECTOS</h1>
-
+    <>
+    <div className="flex justify-center items-center h-full flex-col">
+      <h1 className="text-3xl py-3 text-center">PROYECTOS</h1>
       <Cards />
     </div>
+    </>
   );
 };
 

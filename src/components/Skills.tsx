@@ -1,76 +1,56 @@
 import React from "react";
-
-import { AiFillHtml5 } from "react-icons/ai";
+import { FaNode } from "react-icons/fa";
+import { TiHtml5 } from "react-icons/ti";
 import { IoLogoCss3 } from "react-icons/io";
 import { IoLogoJavascript } from "react-icons/io";
 import { BsFillBootstrapFill } from "react-icons/bs";
 import {
   SiReact,
-  SiJest,
   SiTailwindcss,
-  SiJquery,
+  SiRedux,
   SiTypescript,
+  SiMongodb,
+  SiExpress,
+  SiMysql,
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 
-import { useTheme } from "next-themes";
+const iconCommonStyle = {
+  width: 80,
+  height: 80,
+};
 
 const skills = [
-  { id: 1, icon: <AiFillHtml5 /> },
-  { id: 2, icon: <IoLogoCss3 /> },
-  { id: 3, icon: <BsFillBootstrapFill /> },
-  { id: 4, icon: <SiTailwindcss /> },
-  { id: 5, icon: <IoLogoJavascript /> },
-  { id: 6, icon: <SiTypescript /> },
-  { id: 7, icon: <SiJquery /> },
-  { id: 8, icon: <SiReact /> },
-  { id: 9, icon: <TbBrandNextjs /> },
-  { id: 10, icon: <SiJest /> },
+  { id: 1, icon: <TiHtml5 style={iconCommonStyle} />, skill:"Html" },
+  { id: 2, icon: <IoLogoCss3 style={iconCommonStyle} />,skill:"Css" },
+  { id: 3, icon: <BsFillBootstrapFill style={iconCommonStyle} />,skill:"Bootstrap" },
+  { id: 4, icon: <SiTailwindcss style={iconCommonStyle} />,skill:"Tailwindcss" },
+  { id: 5, icon: <IoLogoJavascript style={iconCommonStyle} />,skill:"Javascript" },
+  { id: 6, icon: <SiTypescript style={iconCommonStyle} />,skill:"Typescript" },
+  { id: 7, icon: <SiRedux style={iconCommonStyle} />,skill:"Redux" },
+  { id: 8, icon: <SiReact style={iconCommonStyle} /> ,skill:"React"},
+  { id: 9, icon: <TbBrandNextjs style={iconCommonStyle} /> ,skill:"Next JS"},
+  { id: 11, icon: <SiMongodb style={iconCommonStyle} /> ,skill:"MongoDB"},
+  { id: 12, icon: <FaNode style={iconCommonStyle} />,skill:"Node JS" },
+  { id: 13, icon: <SiExpress style={iconCommonStyle} /> ,skill:"Express"},
+  { id: 13, icon: <SiMysql style={iconCommonStyle} /> ,skill:"MySQL"},
 ];
 
 const Skills = () => {
-  const { theme } = useTheme();
-
-  const light = theme === "light";
   return (
-    <div className="flex items-center justify-center flex-col">
-      <h1 className="text-3xl py-3 text-center">HABILIDADES TECNICAS</h1>
-      <div
-        className="
-      flex
-      justify-center
-      items-center
-      "
-      >
-        <ul
-          className="
-           grid 
-           grid-cols-5 
-           gap-8 
-           mt-10
-           text-3xl
-           content-center
-           h-56
-           md:text-5xl
-           sm:text-5xl
-           sm:gap-4
-           "
-        >
-          {skills.map((icon, index) => (
-            <li
-              key={index}
-              className={
-                light
-                  ? "border border-[#0456A9] rounded py-2 px-2 "
-                  : "border border-[#88ffcc] rounded py-2 px-2"
-              }
-            >
-              {icon.icon}
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4">
+   <div className="col-span-full">
+      <h1 className="text-3xl py-3 text-center mt-7">HABILIDADES TECNICAS</h1>
     </div>
+    {skills.map((element) => (
+      <div key={element.id} className="shadow-lg px-2 py-1 rounded w-[252px] h-[197px] flex justify-center items-center">
+        <div className="flex flex-col animate-pulse">
+          {element.icon}
+          <span className="text-center">{element.skill}</span>
+        </div>
+      </div>
+    ))}
+  </div>
   );
 };
 

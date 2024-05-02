@@ -15,16 +15,16 @@ const Presentation = () => {
           <h1 className=" ml-2 md:m-0 sm:ml-2">SANCHEZ</h1>
         </div>
 
-        <span className=" text-center text-xl md:text-2xl sm:text-xl sm:text-center md:text-left">
-          Front-End Developer Jr
+        <span className=" text-center text-xl md:text-2xl sm:text-xl sm:text-center md:text-left pb-4">
+          Frontend Developer 
         </span>
 
-        <p className=" text-center sm:text-center md:text-left">
-          Soy un desarrollador web apasionado por la tecnologia, por la
+        <p className=" text-center sm:text-center md:text-left text-lg">
+          Soy un desarrollador apasionado por la tecnologia, por la
           innovacion y por todo lo que nos tiene el futuro en el mundo IT. 
           Soy una persona disciplinada apta para cualquier desafio, 
           siempre dispuesto a ayudar y aprender de los mas experimentados en este 
-          camino del desarrollo web
+          camino de aprendizaje y crecimiento
         </p>
         <SocialContact />
       </div>

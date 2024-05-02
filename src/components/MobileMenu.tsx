@@ -11,7 +11,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ visible }) => {
   }
 
   const handleDownload = () => {
-    window.open("/JesusCV.pdf", "_blank");
+    window.open("/Curriculum.pdf", "_blank");
   };
 
   return (
