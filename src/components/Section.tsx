@@ -7,7 +7,7 @@ interface ContainerProps {
   id: string;
 }
 
-const Container = ({ children, id }: ContainerProps) => {
+const Section = ({ children, id }: ContainerProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
 
@@ -29,4 +29,4 @@ const Container = ({ children, id }: ContainerProps) => {
   );
 };
 
-export default Container;
+export default Section;
