@@ -1,9 +1,11 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    reactStrictMode:true,
-    compiler: {
-        styledComponents:true
-    }
-};
+import createNextIntlPlugin from 'next-intl/plugin';
+ 
+const withNextIntl = createNextIntlPlugin();
 
-module.exports = nextConfig
+
+/** @type {import('next').NextConfig} */
+
+const nextConfig = {}
+    
+
+export default withNextIntl(nextConfig);

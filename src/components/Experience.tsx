@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from "react";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
@@ -6,14 +8,16 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-
+import { useTranslations } from "next-intl";
 import Typography from "@mui/material/Typography";
 
 export default function Experience() {
+ 
+  
   return (
     <>
      <div className="flex flex-col">
-      <h1 className="text-3xl py-3 text-center">EXPERIENCIA LABORAL</h1>
+      <h1 className="text-3xl py-3 text-center">EXPERIENCIA</h1>
 
       <div className="mt-10">
       <Timeline position="alternate">
@@ -36,9 +40,9 @@ export default function Experience() {
               Panaderia COCO
             </Typography>
             <ul>
-              <li>Diseño de interfaz de usuario</li>
-              <li>Colaboracion en armado de base de datos</li>
-              <li>Reunion con cliente para las bases y condiciones</li>
+              <li> - Diseño de interfaz de usuario</li>
+              <li> - Armado de base de datos</li>
+              <li> - Reunion con cliente para las bases y condiciones</li>
             </ul>
           </TimelineContent>
         </TimelineItem>

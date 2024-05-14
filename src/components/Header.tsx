@@ -21,10 +21,14 @@ const Header = () => {
           : "fixed w-full"
       }
     >
-      <div className="flex items-center sm:items-center justify-between h-20">
-        <h1 className="text-5xl ms-4">JS</h1>
+      <div className="flex items-center sm:items-center justify-around h-20">
+
+        <div className="ms-8">
+        <span className="text-4xl">JS</span>
+        <span className="text-2xl text-[#88ffcc]">.dev</span>
+        </div>
         <Menu />
-        <DowloadCv />
+       
         <div className="flex justify-end xl:hidden items-center">
           <div className="cursor-pointer transition absolute right-14">
             <AiOutlineMenu

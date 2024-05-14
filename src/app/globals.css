@@ -7,19 +7,22 @@ html {
   scroll-behavior: smooth !important;
 }
 
-[data-theme="light"] body {
-  color: black !important;
-  background-color: #E7E7E7 !important;
-  transition-delay: 0, 2s;
+html , body {
+  background-color: #001852;
+  color: white
 }
 
-[data-theme="dark"] body {
-  background-color: #001852 !important;
-  color: white !important;
-  transition-delay: 0, 2s;
+
+#tsparticles {
+  position: absolute;
+  height: 92vh !important;
+  left: 0;
+  right: 0;
+  top:3;
+  bottom:0;
 }
 
-[data-theme="dark"] .active-scroll-spy {
+.active-scroll-spy {
   border: 1px solid #88ffcc;
   border-radius: 10px;
   padding: 10px;
@@ -27,12 +30,3 @@ html {
 
 }
 
-[data-theme="light"] .active-scroll-spy {
-  border: 1px solid #0456a9;
-  border-radius: 10px;
-  padding: 10px;
-  transition-delay: 0, 2s;
- 
-}
-
-  

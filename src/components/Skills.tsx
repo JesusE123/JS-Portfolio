@@ -42,8 +42,8 @@ const Skills = () => {
    <div className="col-span-full">
       <h1 className="text-3xl py-3 text-center mt-7">HABILIDADES TECNICAS</h1>
     </div>
-    {skills.map((element) => (
-      <div key={element.id} className="shadow-lg px-2 py-1 rounded w-[252px] h-[197px] flex justify-center items-center">
+    {skills.map((element, index) => (
+      <div key={index} className="shadow-lg px-2 py-1 rounded w-[252px] h-[197px] flex justify-center items-center">
         <div className="flex flex-col animate-pulse">
           {element.icon}
           <span className="text-center">{element.skill}</span>

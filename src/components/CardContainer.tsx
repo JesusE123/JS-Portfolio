@@ -1,6 +1,7 @@
 import React from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import Image from "next/image";
 
 interface cardProps {
   name?: string;
@@ -21,11 +22,9 @@ const CardContainer: React.FC<cardProps> = ({
     <>
      
 
-<div className=
-{light ? "w-96 h-[380px] bg-[#E7E7E7] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 px-2 py-1" : 
-"w-96 h-[380px] bg-[#001852] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 px-2 py-1"}>
+<div className="w-96 h-[380px] bg-[#001852]  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 px-2 py-1">
   <div>
-    <img src={image} alt="title logo" className="rounded rounded-lg object-cover w-full h-44 hover:scale-125 transition inline-flex" />
+    <img src={image} alt="title logo" className="rounded-lg object-cover w-full h-44 hover:scale-125 transition inline-flex" />
   </div>
 
   <div className={light ? "font-semibold text-2xl text-black mt-3": "font-semibold text-2xl text-white mt-3"}>
@@ -36,7 +35,7 @@ const CardContainer: React.FC<cardProps> = ({
     <p>{description}</p>
   </div>
 
-  <Link target="_blank" href={`${path}`} className={light ? "text-white hover:scale-90 inline-flex transition px-2 py-1 rounded bg-[#0456A9]" : "text-white hover:scale-90 inline-flex transition bg-[#031242] px-2 py-1 rounded"}>
+  <Link target="_blank" href={`${path}`} className="text-white font-bold hover:scale-90 inline-flex transition border border-[#88ffcc] px-2 py-1 rounded">
   Ver proyecto
   </Link>
        
