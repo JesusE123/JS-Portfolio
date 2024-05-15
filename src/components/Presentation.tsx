@@ -37,7 +37,7 @@ const Presentation = () => {
           camino de aprendizaje y crecimiento.
         </p>
 
-        <div className="flex justify-between mt-3">
+        <div className="flex justify-center mt-3 lg:justify-between">
         <SocialContact />
         <DowloadCv />
         </div>

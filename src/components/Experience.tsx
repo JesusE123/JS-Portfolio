@@ -64,9 +64,9 @@ export default function Experience() {
               Kiosco City 24/7
             </Typography>
             <ul>
-              <li>Diseño de interfaz de usuario</li>
-              <li>Armado de modulo TPV</li>
-              <li></li>
+              <li> - Diseño de interfaz de usuario</li>
+              <li> - Armado de modulo TPV</li>
+              
             </ul>
           </TimelineContent>
         </TimelineItem>

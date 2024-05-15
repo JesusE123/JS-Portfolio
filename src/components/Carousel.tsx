@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/carousel"
 import CardContainer from "./CardContainer"
 
-export function CarouselP({data}) {
+export function CarouselP({data, children}) {
   return (
     <Carousel className="w-full max-w-xs xl:hidden">
       <CarouselContent>
@@ -19,12 +19,7 @@ export function CarouselP({data}) {
             <div className="p-1">
               <Card className="">
                 <CardContent className="flex aspect-square items-center justify-center p-6 ">
-                 <CardContainer 
-                 name={element.name}
-                 path={element.path}
-                 image={element.img}
-                 description={element.description}
-                 />
+                  {children}
                 </CardContent>
               </Card>
             </div>
