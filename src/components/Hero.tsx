@@ -38,18 +38,17 @@ function Hero() {
         </div>
       </div>
       <div className="hidden lg:mt-0 lg:col-span-5 lg:flex justify-center">
-        <div className="relative">
-          <div className="absolute inset-0 border-4 border-[#88ffcc] rounded-full border-dotted  p-2"></div>
-          <Image
-            src="/man.png"
-            alt="human"
-            width={550}
-            height={400}
-            quality={100}
-            className="rounded-lg"
-          />
-        </div>
+      <div className="opacity-90 rounded-r-lg p-2">
+        <Image
+          src="/man.png"
+          alt="human"
+          width={550}
+          height={400}
+          quality={100}
+          className="rounded-lg"
+        />
       </div>
+    </div>
     </motion.div>
   );
 }
