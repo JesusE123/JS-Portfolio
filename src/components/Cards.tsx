@@ -39,7 +39,7 @@ export const Cards = () => {
       id: 5,
       name: "Portfolio web",
       path: "https://github.com/JesusE123/JS-Portfolio",
-      img: "./portfolio.png",
+      img: "./Portfolio.png",
       description:
       "Portfolio personal realizado para mostrar los trabajos previamente echos junto a las experiencias laborales y todo mi camino como desarrollador"
     },
