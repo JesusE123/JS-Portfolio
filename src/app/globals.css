@@ -7,20 +7,7 @@ html {
   scroll-behavior: smooth !important;
 }
 
-html , body {
-  background-color: #001852;
-  color: white
-}
 
-
-#tsparticles {
-  position: absolute;
-  height: 92vh !important;
-  left: 0;
-  right: 0;
-  top:2;
-  bottom:0;
-}
 
 .active-scroll-spy {
   border: 1px solid #88ffcc;
@@ -28,5 +15,15 @@ html , body {
   padding: 10px;
   transition-delay: 0, 2s;
 
+}
+
+
+@keyframes spin-border {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 

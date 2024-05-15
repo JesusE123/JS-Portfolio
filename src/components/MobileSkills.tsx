@@ -1,5 +1,4 @@
-import * as React from "react"
-
+import React from 'react'
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
@@ -8,23 +7,19 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import CardContainer from "./CardContainer"
-
-export function CarouselP({data}) {
+const MobileSkills = ({data}) => {
+    
   return (
-    <Carousel className="w-full max-w-xs xl:hidden">
+    <div>
+        <Carousel className="w-full max-w-xs xl:hidden">
       <CarouselContent>
         {data.map((element, index) => (
           <CarouselItem key={index}>
             <div className="p-1">
               <Card className="">
-                <CardContent className="flex aspect-square items-center justify-center p-6 ">
-                 <CardContainer 
-                 name={element.name}
-                 path={element.path}
-                 image={element.img}
-                 description={element.description}
-                 />
+                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col ">
+                 {element.icon}
+                 <p>{element.skill}</p>
                 </CardContent>
               </Card>
             </div>
@@ -34,5 +29,8 @@ export function CarouselP({data}) {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
+    </div>
   )
 }
+
+export default MobileSkills

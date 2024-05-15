@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <>
       <Header />
-
+    
       <ScrollSpy scrollThrottle={100} useBoxMethod={false}>
         <Section id="sobreMi">
          <Hero />
@@ -42,7 +42,7 @@ export default function Home() {
           <Contact />
         </Section>
       </ScrollSpy>
-      <div className="flex flex-col items-start snap-start min-h-[30vh] sm:grid grid-cols-2 grid-rows-1  gap-x-8 sm:items-center bg-white text-black">
+      <div className="flex flex-col items-start snap-start min-h-[30vh] sm:grid grid-cols-2 grid-rows-1  gap-x-8 sm:items-center bg-black text-white">
         <div className="flex justify-center">
           <Copyright />
         </div>

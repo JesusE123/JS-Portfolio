@@ -22,16 +22,16 @@ const CardContainer: React.FC<cardProps> = ({
     <>
      
 
-<div className="w-96 h-[380px] bg-[#001852]  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 px-2 py-1">
+<div className="w-96 h-[380px] rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 px-2 py-1">
   <div>
     <img src={image} alt="title logo" className="rounded-lg object-cover w-full h-44 hover:scale-125 transition inline-flex" />
   </div>
 
-  <div className={light ? "font-semibold text-2xl text-black mt-3": "font-semibold text-2xl text-white mt-3"}>
+  <div className="font-semibold text-2xl text-white mt-3">
     <h5 >{name}</h5>
   </div>
 
-  <div className={light ? "text-sm text-gray-900 h-28" : "text-sm text-gray-300 h-28"}>
+  <div className= "text-sm text-gray-300 h-28">
     <p>{description}</p>
   </div>
 

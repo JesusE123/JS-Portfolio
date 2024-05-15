@@ -30,10 +30,9 @@ export default function RootLayout({
 
 
   return (
-    <html lang="es" className={gruppo.className}>
+    <html lang="es" className={`${gruppo.className} bg-[url('/bg.jpeg')] bg-cover bg-center text-white`}>
       <body>
-          
-            {children}
+        {children}
       </body>
     </html>
   );

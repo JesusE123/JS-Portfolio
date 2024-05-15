@@ -15,6 +15,7 @@ import {
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { Carousel } from "./ui/carousel";
+import MobileSkills from "./MobileSkills";
 
 const iconCommonStyle = {
   width: 80,
@@ -40,7 +41,29 @@ const skills = [
 const Skills = () => {
   return (
     <>
-    hola
+
+    
+    <div className="flex flex-col lg:flex lg:flex-col">
+    <h1 className="text-3xl py-3 text-center">HABILIDADES TECNICAS</h1>
+    
+
+    
+    
+    <div className="hidden lg:grid grid-cols-4 gap-7">
+    {skills.map((element,index) => (
+      <div key={index} className="animate-pulse flex justify-center items-center flex-col shadow-lg py-1 px-2 w-[200px] h-[200px]">
+        {element.icon}
+        <p>{element.skill}</p>
+      </div>
+    ))}
+   
+   </div>
+   </div>
+
+
+    <div className="lg:hidden">
+    <MobileSkills data={skills}/>
+    </div>
     </>
   );
 };
