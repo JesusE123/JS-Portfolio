@@ -9,7 +9,7 @@ export const TypeAnimationC = () => {
           // Same substring at the start will only be typed out once, initially
           'Apasionate',
           1000, // wait 1s before replacing "Mice" with "Hamsters"
-          'Frontend Developer',
+          'Fullstack Developer',
           1000,
         ]}
         wrapper="span"
