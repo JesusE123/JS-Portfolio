@@ -14,7 +14,7 @@ const Section = ({ children, id }: ContainerProps) => {
     <div
     
       id={id}
-      className=" justify-center flex-col h-[100vh] sm:h-[100vh] flex xl:justify-center items-center lg:w-full lg:justify-evenly md:w-full sm:justify-center sm:flex-col"
+      className=" justify-center flex-col h-[100vh] sm:h-[100vh] lg:h-[110vh] flex xl:justify-center items-center lg:w-full lg:justify-evenly md:w-full sm:justify-center sm:flex-col"
     >
      
         {children}

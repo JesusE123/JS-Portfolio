@@ -45,11 +45,8 @@ const Skills = () => {
     
     <div className="flex flex-col lg:flex lg:flex-col">
     <h1 className="text-3xl py-3 text-center">HABILIDADES TECNICAS</h1>
-    
-
-    
-    
     <div className="hidden lg:grid grid-cols-4 gap-7">
+    
     {skills.map((element,index) => (
       <div key={index} className="animate-pulse flex justify-center items-center flex-col shadow-lg py-1 px-2 w-[200px] h-[200px]">
         {element.icon}
