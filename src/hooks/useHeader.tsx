@@ -18,6 +18,7 @@ const useHeader = () => {
     };
     window.addEventListener("scroll", handleBackground);
   }, []);
+  
 
   return { background, showMobileMenu, toggleMobileMenu };
 };

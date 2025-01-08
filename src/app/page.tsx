@@ -13,35 +13,22 @@ import Experience from "@/components/Experience";
 import { PersonalInformation } from "@/components/PersonalInformation";
 //
 
+import Hero from "@/components/Hero";
 
-import Hero  from "@/components/Hero";
-import Section from "@/components/Section";
 export default function Home() {
   return (
     <>
       <Header />
-    
-      <ScrollSpy scrollThrottle={100} useBoxMethod={false}>
-        <Section id="sobreMi">
-         <Hero />
-        </Section>
+      <Hero />
 
-        <Section id="habilidades">
-          <Skills />
-        </Section>
+      <Skills />
 
-        <Section id="experiencia">
-          <Experience />
-        </Section>
+      <Experience />
 
-        <Section id="proyectos">
-          <Projects />
-        </Section>
+      <Projects />
 
-        <Section id="contacto">
-          <Contact />
-        </Section>
-      </ScrollSpy>
+      <Contact />
+
       <div className="flex flex-col items-start snap-start min-h-[30vh] sm:grid grid-cols-2 grid-rows-1  gap-x-8 sm:items-center bg-black text-white">
         <div className="flex justify-center">
           <Copyright />

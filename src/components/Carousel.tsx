@@ -12,7 +12,7 @@ import CardContainer from "./CardContainer"
 
 export function CarouselP({data}) {
   return (
-    <Carousel className="w-full max-w-xs xl:hidden">
+    <Carousel className="w-full max-w-xs xl:hidden block">
       <CarouselContent>
         {data.map((element, index) => (
           <CarouselItem key={index}>
@@ -24,6 +24,7 @@ export function CarouselP({data}) {
                  path={element.path}
                  image={element.img}
                  description={element.description}
+                 tecnologies={element.technologies}
                  />
                 </CardContent>
               </Card>
