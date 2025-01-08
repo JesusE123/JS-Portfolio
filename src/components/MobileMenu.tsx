@@ -1,39 +1,53 @@
-import React from "react";
-import MenuItem from "./MenuItem";
+'use client'
 
-interface MobileMenuProps {
-  visible?: boolean;
-}
+import { useState } from 'react'
+import { Menu } from 'lucide-react'
+import { Button } from "@/components/ui/button"
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 
-const MobileMenu: React.FC<MobileMenuProps> = ({ visible }) => {
-  if (!visible) {
-    return null;
-  }
+const menuItems = [
+  { name: 'Sobre mi', href: '#sobreMi' },
+  { name: 'Habilidades', href: '#habilidades' },
+  { name: 'Proyectos', href: '#proyectos' },
+  { name: 'Experiencia', href: '#experiencia' },
+  { name: 'Contacto', href: '#contacto' },
+]
 
-  const handleDownload = () => {
-    window.open("/JesusCV.pdf", "_blank");
-  };
+export function MobileMenu() {
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="h-[250px]  fixed right-3">
-      <div
-        className="
-      h-0
-      flex
-      flex-col
-      space-y-3
-      mt-8
-      
-      "
-      >
-        <MenuItem label="Sobre mi" href="/#sobreMi" />
-        <MenuItem label="Habilidades" href="/#habilidades" />
-        <MenuItem label="Proyectos" href="/#proyectos" />
-        <MenuItem label="Contacto" href="/#contacto" />
-        <MenuItem label="Descargar CV" Onclick={handleDownload} href="" />
-      </div>
-    </div>
-  );
-};
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
+      <SheetTrigger asChild>
+        <Button variant="outline" size="icon" className="lg:hidden">
+          <Menu className="h-6 w-6" />
+          <span className="sr-only">Abrir menú</span>
+        </Button>
+      </SheetTrigger>
+      <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+        <SheetHeader>
+          <SheetTitle className="text-left">Menú</SheetTitle>
+        </SheetHeader>
+        <nav className="flex flex-col gap-4 mt-8">
+          {menuItems.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className="text-lg font-medium text-gray-600 hover:text-gray-900 transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              {item.name}
+            </a>
+          ))}
+        </nav>
+      </SheetContent>
+    </Sheet>
+  )
+}
 
-export default MobileMenu;

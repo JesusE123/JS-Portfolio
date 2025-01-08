@@ -26,7 +26,7 @@ const SocialContact = () => {
         {paths.map((element, index) => (
           <Link
             href={`${element.path}`} target="_blank"
-            className="hover:bg-opacity-25 transition cursor-pointer"
+            className="hover:scale-110  transition cursor-pointer"
             key={index}
           >
             {element.icon}

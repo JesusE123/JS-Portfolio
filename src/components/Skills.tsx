@@ -1,76 +1,94 @@
 import React from "react";
-
-import { AiFillHtml5 } from "react-icons/ai";
+import { FaNode } from "react-icons/fa";
+import { TiHtml5 } from "react-icons/ti";
 import { IoLogoCss3 } from "react-icons/io";
 import { IoLogoJavascript } from "react-icons/io";
 import { BsFillBootstrapFill } from "react-icons/bs";
+
 import {
   SiReact,
-  SiJest,
   SiTailwindcss,
-  SiJquery,
+  SiRedux,
   SiTypescript,
+  SiMongodb,
+  SiExpress,
+  SiMysql,
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
+import { Carousel } from "./ui/carousel";
+import MobileSkills from "./MobileSkills";
+import ScrollReveal from "./ScrollReveal";
+import Section from "./Section";
+import Net from "./Net";
 
-import { useTheme } from "next-themes";
+const iconCommonStyle = {
+  width: 80,
+  height: 80,
+};
 
 const skills = [
-  { id: 1, icon: <AiFillHtml5 /> },
-  { id: 2, icon: <IoLogoCss3 /> },
-  { id: 3, icon: <BsFillBootstrapFill /> },
-  { id: 4, icon: <SiTailwindcss /> },
-  { id: 5, icon: <IoLogoJavascript /> },
-  { id: 6, icon: <SiTypescript /> },
-  { id: 7, icon: <SiJquery /> },
-  { id: 8, icon: <SiReact /> },
-  { id: 9, icon: <TbBrandNextjs /> },
-  { id: 10, icon: <SiJest /> },
+  { id: 1, icon: <TiHtml5 style={iconCommonStyle} />, skill: "Html" },
+  { id: 2, icon: <IoLogoCss3 style={iconCommonStyle} />, skill: "Css" },
+  {
+    id: 3,
+    icon: <BsFillBootstrapFill style={iconCommonStyle} />,
+    skill: "Bootstrap",
+  },
+  {
+    id: 4,
+    icon: <SiTailwindcss style={iconCommonStyle} />,
+    skill: "Tailwindcss",
+  },
+  {
+    id: 5,
+    icon: <IoLogoJavascript style={iconCommonStyle} />,
+    skill: "Javascript",
+  },
+  {
+    id: 6,
+    icon: <SiTypescript style={iconCommonStyle} />,
+    skill: "Typescript",
+  },
+  { id: 7, icon: <SiRedux style={iconCommonStyle} />, skill: "Redux" },
+  { id: 8, icon: <SiReact style={iconCommonStyle} />, skill: "React" },
+  { id: 9, icon: <TbBrandNextjs style={iconCommonStyle} />, skill: "Next JS" },
+  { id: 10, icon: <SiMongodb style={iconCommonStyle} />, skill: "MongoDB" },
+  { id: 11, icon: <FaNode style={iconCommonStyle} />, skill: "Node JS" },
+  { id: 12, icon: <SiExpress style={iconCommonStyle} />, skill: "Express" },
+  { id: 13, icon: <SiMysql style={iconCommonStyle} />, skill: "MySQL" },
+  { id: 14, icon: <Net />, skill: ".NET" },
+  
 ];
 
 const Skills = () => {
-  const { theme } = useTheme();
-
-  const light = theme === "light";
   return (
-    <div className="flex items-center justify-center flex-col">
-      <h1 className="text-3xl py-3 text-center">HABILIDADES TECNICAS</h1>
-      <div
-        className="
-      flex
-      justify-center
-      items-center
-      "
-      >
-        <ul
-          className="
-           grid 
-           grid-cols-5 
-           gap-8 
-           mt-10
-           text-3xl
-           content-center
-           h-56
-           md:text-5xl
-           sm:text-5xl
-           sm:gap-4
-           "
-        >
-          {skills.map((icon, index) => (
-            <li
-              key={index}
-              className={
-                light
-                  ? "border border-[#0456A9] rounded py-2 px-2 "
-                  : "border border-[#88ffcc] rounded py-2 px-2"
-              }
-            >
-              {icon.icon}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
+    <>
+      <ScrollReveal>
+        <Section id="habilidades">
+          <div className="flex flex-col w-full">
+            <h2 className="text-4xl py-3 text-center font-bold">
+              HABILIDADES TÉCNICAS 🚀
+            </h2>
+            {/* Para pantallas grandes */}
+            <div className="hidden lg:grid grid-cols-5 gap-7 place-content-center items-center">
+              {skills.map((element, index) => (
+                <div
+                  key={index}
+                  className="animate-pulse flex justify-center items-center flex-col shadow-lg py-1 px-2 w-[200px] h-[200px]"
+                >
+                  {element.icon}
+                  <p>{element.skill}</p>
+                </div>
+              ))}
+            </div>
+            {/* Para pantallas pequeñas */}
+            <div className="lg:hidden flex justify-center items-center">
+              <MobileSkills data={skills} />
+            </div>
+          </div>
+        </Section>
+      </ScrollReveal>
+    </>
   );
 };
 
