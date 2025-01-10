@@ -5,9 +5,6 @@ import { SiReact, SiTailwindcss, SiRedux, SiMysql } from "react-icons/si";
 import { TiHtml5 } from "react-icons/ti";
 import { BsFillBootstrapFill } from "react-icons/bs";
 import { IoLogoJavascript } from "react-icons/io";
-import { SiSequelize } from "react-icons/si";
-import { DiNetmagazine } from "react-icons/di";
-import { CarouselP } from "./Carousel";
 import Net from "./Net";
 
 export const Cards = () => {
