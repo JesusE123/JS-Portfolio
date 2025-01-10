@@ -18,7 +18,7 @@ export const Cards = () => {
       name: "Mercado Calculator",
       path: "https://mercado-calculator.vercel.app",
       description:"Aplicacion de calculadora de mercado, es una herramienta personal que te permite poder llevar un control de tus compras, logrando manipular los productos que has comprado, y poder ver el total de tu compra.",
-      img: "./mercado-app.png",
+      img: "mercado-app.png",
       technologies: [
         { name: "React", icon: <SiReact  size={50}/> },
         { name: "Tailwind CSS", icon:  <SiTailwindcss size={50}  /> },
@@ -30,7 +30,7 @@ export const Cards = () => {
       name: "Portfolio web",
       path: "https://github.com/JesusE123/JS-Portfolio",
       description:"Portfolio personal realizado para mostrar los trabajos previamente echos junto a las experiencias laborales y todo mi camino como desarrollador.",
-      img: "./portfolio.png",
+      img: "portfolio.png",
       technologies: [
         
         { name: "Next.js", icon: <TbBrandNextjs size={50}/>  },
@@ -43,7 +43,7 @@ export const Cards = () => {
       name: "Coco Panaderia",
       path: "https://github.com/LuisRon27/Panaderia_coco",
       description:" Web creada para una panaderia el cual le permitio a la empresa poder tomar pedidos online,poder gestionar a sus cadetes para las entregas y permitir ver a los clientes la variedad de los productos que ofrecen.",
-      img: "./coco.jpeg",
+      img: "coco.jpeg",
       technologies: [
         { name: "Html", icon: <TiHtml5 size={50} /> },
         { name: "Bootstrap", icon: <BsFillBootstrapFill size={50} /> },
@@ -56,7 +56,7 @@ export const Cards = () => {
       name: "Nexus Gestion",
       path: "https://nexus-gestion.vercel.app/",
       description:" Sistema desarrollado para un comercio de venta mayorista,permitiendo la gestión de inventarios, ventas, clientes y proveedores, con un enfoque centrado en la eficiencia y la                optimización de procesos.",
-      img: "./nexus.png",
+      img: "nexus.png",
       technologies: [
         
         { name: "Next.js", icon: <TbBrandNextjs  size={50}/>  },
