@@ -27,7 +27,7 @@ const CardContainer: React.FC<cardProps> = ({
         <div className="flex flex-wrap gap-4 sm:py-2.5 lg:gap-6">
           <div className="sm:-my-2.5">
             <Image
-              src={image.startsWith("/") ? image : `/${image}`}
+              src={`/${image}`}
               loading="lazy"
               alt="Product image"
               width={200}
