@@ -51,7 +51,7 @@ export const Cards = () => {
     {
       id: 4,
       name: "Nexus Gestion",
-      path: "https://nexus-gestion.vercel.app/",
+      path: "https://github.com/JesusE123/frontend-amatista",
       description:" Sistema desarrollado para un comercio de venta mayorista,permitiendo la gestión de inventarios, ventas, clientes y proveedores, con un enfoque centrado en la eficiencia y la                optimización de procesos.",
       img: "nexus.png",
       technologies: [

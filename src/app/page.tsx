@@ -20,15 +20,11 @@ export default function Home() {
     <>
       <Header />
       <Hero />
-
       <Skills />
-
       <Experience />
-
       <Projects />
-
       <Contact />
-
+      
       <div className="flex flex-col items-start snap-start min-h-[30vh] sm:grid grid-cols-2 grid-rows-1  gap-x-8 sm:items-center bg-black text-white">
         <div className="flex justify-center">
           <Copyright />
